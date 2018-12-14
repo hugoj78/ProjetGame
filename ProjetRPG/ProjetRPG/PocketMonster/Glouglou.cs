@@ -1,22 +1,46 @@
 ﻿using System;
 namespace ProjetRPG.PocketMonster
 {
-    class Glouglou
+    class Glouglou : Player.Player;
     {
-        public int pv;
-        public int energie;
-        public int exp;
-        public int lvl;
-        public string name;
+        public int level;
 
-
-
-        public Glouglou()
+        public Glouglou(string n) : base(n)
         {
-            //TODO Construteur glouglou
-            // ask choice attaque
-            // disponible selon lvl 
+            
         }
+
+        public int Aquatail()
+        {
+            return 10;
+        }
+
+        public int OPistol()
+        {
+            return 15;
+        }
+
+        public int OSpray()
+        {
+            if (level<= 3)
+                return 20;
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int Siphon()
+        {
+            if (level <= 5)
+                return 25;
+            else
+            {
+                return 0;
+            }
+        }
+
+
 
         public static void PrintGlouglou()
         {

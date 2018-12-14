@@ -68,7 +68,7 @@ namespace ProjetRPG
             "\nPV: 100" +
             "\nDescription: powerful but weaker" +
             "\nAttack: [1] Holy fire              [2] Blast" +
-            "\n        [3] Flame Thrower (lvl 3)  [4] Zenith" +
+            "\n        [3] Flame Thrower (lvl 3)  [4] Zenith (lvl 5)" +
             "\n" +
              "\nSecond choice: Glouglou ");
             PocketMonster.Glouglou.PrintGlouglou();
@@ -77,7 +77,7 @@ namespace ProjetRPG
             "\nPV: 150" +
             "\nDescription: Better than a Fish" +
             "\nAttack: [1] Aquatail               [2] O'Pistol" +
-             "\n        [3] O'Spray (lvl 3)        [4] Siphon" +
+             "\n        [3] O'Spray (lvl 3)        [4] Siphon (lvl 5)" +
             "\nOr You can choose Glouglou who is a water fighter");
 
 
