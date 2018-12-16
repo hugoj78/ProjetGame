@@ -3,16 +3,49 @@ namespace ProjetRPG
 {
     class Game
     {
-        //public Player player;
-        //public Map plateau;
+        public Player.Player player;
+        public Nav.Map plateau;
 
         public Game()
         {
             //TODO Construteur game a faire
         }
 
-        public void StartGame()
+        public static void ChoiceGame(string name, int pet, int weapon)
         {
+           if (pet == 1 && weapon == 1)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
+            }
+           else if (pet == 1 && weapon == 2)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pepper);
+            }
+           else if (pet == 1 && weapon == 3)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Friendzone);
+            }
+           else if (pet == 1 && weapon == 4)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Viagra);
+            }
+           else if (pet == 2 && weapon == 1)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pickle);
+            }
+            else if (pet == 2 && weapon == 2)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pepper);
+            }
+            else if (pet == 2 && weapon == 3)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Friendzone);
+            }
+            else if (pet == 2 && weapon == 4)
+            {
+                Player.Player P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Viagra);
+            }
+
 
         }
 

@@ -86,11 +86,6 @@ namespace ProjetRPG
                           "\nChoose Your New parterner : ");
         }
 
-        public void PrintAskNamePet()
-        {
-            Console.WriteLine("Please enter your New friend name : ");
-        }
-
         public void PrintAskObject()
         {
             Console.WriteLine("You will get an object to start ! Choose the good one ! It could help you" +
@@ -100,7 +95,7 @@ namespace ProjetRPG
             Console.Write("1. Pickle (Full Health)" +
                 "\n2. Pepper (Kill All Enemies)" +
                 "\n3. FriendZone (Nobody Can Touch You)" +
-                "\n3. Viagra (level-up directly)" +
+                "\n4. Viagra (level-up directly)" +
                 "\nYour choice : ");
         }
 
@@ -130,11 +125,11 @@ namespace ProjetRPG
             PrintAskPet();
             int pet = AskChoice(1, 2);
 
-            PrintAskNamePet();
-            string pet_name = AskStringChoice();
-
             PrintAskObject();
-            int weapon = AskChoice(1, 3);
+            int weapon = AskChoice(1, 4);
+
+            Game.ChoiceGame(name, pet, weapon);
+
         }
 
         public void LoadGame()
@@ -204,5 +199,5 @@ namespace ProjetRPG
             Console.ReadLine();
         }
     }
-}                                                                                                          
+}
 
