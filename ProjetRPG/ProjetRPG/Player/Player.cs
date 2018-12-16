@@ -10,7 +10,7 @@ namespace ProjetRPG.Player
         public string Name;
         public PocketMonster Pet;
         public Objet Item;
-        protected int PV;
+        public int PV;
         protected int Energie;
         protected int Level;
 
