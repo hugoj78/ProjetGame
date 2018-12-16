@@ -3,9 +3,9 @@ namespace ProjetRPG.Battle
 {
     class Battle
     {
-        public static void IsPlayerDead(Player.Player.P1)
+        public static void IsPlayerDead()
         {
-            if (Player.Player.P1.PV <= 0 || Player.Player.PocketMonster.Glouglou.PV <= 0)
+            if (Player.Player.P1.PV <= 0 || Player.Player.P1.PV <= 0)
             {
                 Console.Clear();
                 Console.WriteLine("Damn your ennemy kick your ass so bad!");

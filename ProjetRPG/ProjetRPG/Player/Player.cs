@@ -46,10 +46,5 @@ namespace ProjetRPG.Player
             }
         }
 
-        public Player(int level)
-        {
-            Level = level;
-
-        }
     }
 }

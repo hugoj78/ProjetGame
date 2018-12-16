@@ -3,6 +3,7 @@ namespace ProjetRPG.PocketMonster
 {
     class Glouglou : Player.Player
     {
+
         public Glouglou(int n):base(n)
         {
 
