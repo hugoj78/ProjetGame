@@ -6,7 +6,7 @@ namespace ProjetRPG.Object
         public enum ItemType {Pickel, Viagra, Pepper, Friendzone};
 
         public ItemType Type;
-        public ItemStart(string name, string descript, float v, float w, ItemType t) : base(name, descript, v, w)
+        public ItemStart(string name, string descript, float v, float w, ItemType t) : base(name, descript, v)
         {
             Type = t;
         }

@@ -3,12 +3,11 @@ namespace ProjetRPG.PocketMonster
 {
     class Glouglou : Player.Player
     {
-        public int level;
-
-        public Glouglou(int level) : base(level)
+        public Glouglou(int n):base(n)
         {
-            
+
         }
+
 
         public int Aquatail()
         {
@@ -22,7 +21,7 @@ namespace ProjetRPG.PocketMonster
 
         public int OSpray()
         {
-            if (level<= 3)
+            if (Level<= 3)
                 return 20;
             else
             {
@@ -32,7 +31,7 @@ namespace ProjetRPG.PocketMonster
 
         public int Siphon()
         {
-            if (level <= 5)
+            if (Level <= 5)
                 return 25;
             else
             {

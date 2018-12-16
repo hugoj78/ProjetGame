@@ -3,9 +3,7 @@ namespace ProjetRPG.PocketMonster
 {
     class Saicho : Player.Player
     {
-        public int level;
-
-        public Saicho(string n) : base(n)
+        public Saicho(int n):base(n)
         {
 
         }
@@ -22,7 +20,7 @@ namespace ProjetRPG.PocketMonster
 
         public int FlameThrower()
         {
-            if (level <= 3)
+            if (Level <= 3)
                 return 25;
             else
             {
@@ -32,7 +30,7 @@ namespace ProjetRPG.PocketMonster
 
         public int Zenith()
         {
-            if (level <= 5)
+            if (Level <= 5)
                 return 25;
             else
             {

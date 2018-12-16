@@ -22,6 +22,8 @@ namespace ProjetRPG.Player
             Pet = p;
             Item = i;
 
+            Inventaire = new Object.Inventaire[10];
+
             if (p == PocketMonster.Saicho)
             {
                 PV = 100;
@@ -30,7 +32,7 @@ namespace ProjetRPG.Player
 
                 if (i == Objet.Pickle)
                 {
-                    Inventaire = new Object.Inventaire[10];
+
 
                 }
 
