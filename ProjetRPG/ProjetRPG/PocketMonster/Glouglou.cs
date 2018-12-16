@@ -5,7 +5,7 @@ namespace ProjetRPG.PocketMonster
     {
         public int level;
 
-        public Glouglou(string n) : base(n)
+        public Glouglou(int level) : base(level)
         {
             
         }
