@@ -1,13 +1,45 @@
 ﻿using System;
 namespace ProjetRPG.PocketMonster
 {
-    public class Saicho
+    class Saicho : Player.Player
     {
+        public int level;
 
-
-        public Saicho()
+        public Saicho(string n) : base(n)
         {
+
         }
+
+        public int Holyfire()
+        {
+            return 15;
+        }
+
+        public int Blast()
+        {
+            return 20;
+        }
+
+        public int FlameThrower()
+        {
+            if (level <= 3)
+                return 25;
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int Zenith()
+        {
+            if (level <= 5)
+                return 25;
+            else
+            {
+                return 0;
+            }
+        }
+
 
         public static void PrintSaicho()
         {
