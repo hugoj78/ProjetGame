@@ -1,11 +1,11 @@
 ﻿using System;
 namespace ProjetRPG.PocketMonster
 {
-    class Glouglou : Player.Player;
+    class Glouglou : Player.Player
     {
         public int level;
 
-        public Glouglou(string n) : base(n)
+        public Glouglou(int level) : base(level)
         {
             
         }

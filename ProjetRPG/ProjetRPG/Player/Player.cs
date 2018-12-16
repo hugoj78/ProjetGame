@@ -41,6 +41,11 @@ namespace ProjetRPG.Player
                 Energie = 15;
                 Level = 1;
             }
+        }
+
+        public Player(int level)
+        {
+            Level = level;
 
         }
     }
