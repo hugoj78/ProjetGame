@@ -3,8 +3,8 @@ namespace ProjetRPG
 {
     class Game
     {
-        //public Player player;
-        //public Map plateau;
+        public Player.Player player;
+        public Nav.Map plateau;
 
         public Game()
         {

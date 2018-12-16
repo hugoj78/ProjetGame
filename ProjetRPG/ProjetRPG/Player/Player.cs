@@ -11,7 +11,6 @@ namespace ProjetRPG.Player
         public PocketMonster Pet;
         public Objet Item;
         protected int PV;
-        protected int Energie;
         protected int Level;
 
         public Object.Inventaire[] Inventaire;
@@ -27,7 +26,6 @@ namespace ProjetRPG.Player
             if (p == PocketMonster.Saicho)
             {
                 PV = 100;
-                Energie = 15;
                 Level = 1;
 
                 if (i == Objet.Pickle)
@@ -40,7 +38,6 @@ namespace ProjetRPG.Player
             else if (p == PocketMonster.Glouglou)
             {
                 PV = 150;
-                Energie = 15;
                 Level = 1;
             }
         }
