@@ -14,5 +14,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Object\Paper.cs" />
+    <Compile Remove="Object\Viagra.cs" />
+    <Compile Remove="Object\Pepper.cs" />
+    <Compile Remove="Object\Pickle.cs" />
+    <Compile Remove="Object\Friendzone.cs" />
   </ItemGroup>
 </Project>

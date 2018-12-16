@@ -5,7 +5,7 @@ namespace ProjetRPG.Player
     class Player
     {
         public enum PocketMonster { Saicho, Glouglou};
-        public enum Objet { Pickle, Cornichon, Friendzone}
+        public enum Objet { Pickle, Pepper, Friendzone, Viagra}
 
         public string Name;
         public PocketMonster Pet;
@@ -28,7 +28,7 @@ namespace ProjetRPG.Player
                 Energie = 15;
                 Level = 1;
 
-                if (i == Objet.Cornichon)
+                if (i == Objet.Pickle)
                 {
                     Inventaire = new Object.Inventaire[10];
 
@@ -46,6 +46,7 @@ namespace ProjetRPG.Player
         public Player(int level)
         {
             Level = level;
+
         }
     }
 }

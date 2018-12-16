@@ -3,7 +3,7 @@ namespace ProjetRPG.Object
 {
     public class ItemStart : Inventaire
     {
-        public enum ItemType { Heal, Defense, Attack };
+        public enum ItemType {Pickel, Viagra, Pepper, Friendzone};
 
         public ItemType Type;
         public ItemStart(string name, string descript, float v, float w, ItemType t) : base(name, descript, v, w)

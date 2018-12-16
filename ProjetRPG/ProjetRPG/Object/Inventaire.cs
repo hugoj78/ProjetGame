@@ -6,14 +6,12 @@ namespace ProjetRPG.Object
         public string Name;
         public string Description;
         public float Value;
-        public float Weight;
 
-        public Inventaire(string name, string descript, float v, float w)
+        public Inventaire(string name, string descript, float v)
         {
             Name = name;
             Description = descript;
             Value = v;
-            Weight = w;
         }
 
         public void Print()
