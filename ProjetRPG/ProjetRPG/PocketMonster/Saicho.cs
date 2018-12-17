@@ -21,33 +21,20 @@ namespace ProjetRPG.PocketMonster
 
         }
 
-        public int Holyfire()
+        public static int AttackGlouglou(int choice)
         {
-            return 15;
-        }
-
-        public int Blast()
-        {
-            return 20;
-        }
-
-        public int FlameThrower()
-        {
-            if (Level <= 3)
-                return 25;
-            else
+            switch (choice)
             {
-                return 0;
-            }
-        }
-
-        public int Zenith()
-        {
-            if (Level <= 5)
-                return 25;
-            else
-            {
-                return 0;
+                case 1:
+                    return 15;
+                case 2:
+                    return 25;
+                case 3:
+                    return 30;
+                case 4:
+                    return 35;
+                default:
+                    return 0;
             }
         }
 

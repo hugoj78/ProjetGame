@@ -100,6 +100,9 @@ namespace ProjetRPG
                     {
                         case Player.Player.PocketMonster.Glouglou:
                             PocketMonster.Glouglou.PrintGlouGlouAttack(P1.Level);
+   
+                            Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
+
                             break;
                         case Player.Player.PocketMonster.Saicho:
                             PocketMonster.Saicho.PrintSaichoAttack(P1.Level);
@@ -115,21 +118,51 @@ namespace ProjetRPG
                         inventaire[i].Print();
                     }
 
-
+                    // TODO ASKCHOICE QUELLE POTION UTILISER
+                    // TODO FONCTION USE QUI EXISTE DEJA
+                    // TODO FUnction POUR VIRER UNE VALUE;
+                    // SI VALUE == 0 alors delete objet
                     Console.ReadLine();
+                    Console.Clear();
+                    Choicebattle();
 
                     break;
 
                 case 3:
+
+                    if (Run())
+                    {
+                        // TODO QUITTE LE COMBAT
+                        // TODO MAIS NE l'EVITE PAS PLUS TARD
+                    }
+                    else
+                    {
+                        Console.Write("You try to run away ! But your ennemie keep you !" +
+                        	"\nPress Enter To Continue...");
+                        Console.ReadLine();
+                        Console.Clear();
+                        Choicebattle();
+                    }
+
+
+
                     break;
 
                 default:
                     break;
             }
+        }
 
+        public bool Run()
+        {
+            Random r = new Random();
 
+            if (r.Next(0,100) < 10)
+            {
+                return true;
+            }
 
-           
+            return false;
         }
     }
 }

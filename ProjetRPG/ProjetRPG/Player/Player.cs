@@ -84,5 +84,20 @@ namespace ProjetRPG.Player
             }
             return PV;
         }
+
+       public static int AskAttack(int level)
+        {
+            if (level >= 3 && level < 5)
+            {
+                return 3;
+            }
+            if (level >= 5)
+            {
+                return 4;
+            }
+
+            return 2;
+
+        }
     }
 }

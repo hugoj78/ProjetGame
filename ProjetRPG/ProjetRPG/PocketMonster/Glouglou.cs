@@ -9,47 +9,39 @@ namespace ProjetRPG.PocketMonster
 
         }
 
-
-        public int Aquatail()
+        public static int AttackGlouglou(int choice)
         {
-            return 10;
-        }
-
-        public int OPistol()
-        {
-            return 15;
-        }
-
-        public int OSpray()
-        {
-            if (Level<= 3)
-                return 20;
-            else
+            switch (choice)
             {
-                return 0;
-            }
-        }
-
-        public int Siphon()
-        {
-            if (Level <= 5)
-                return 25;
-            else
-            {
-                return 0;
+                case 1:
+                    return 10;
+                case 2:
+                    return 15;
+                case 3:
+                    return 20;
+                case 4:
+                    return 25;
+                default:
+                    return 0;
             }
         }
 
         public static void PrintGlouGlouAttack(int level)
         {
-            if (level < 3)
+            if (level < 3) { 
                 Console.WriteLine("[1] Holy fire             [2] Blast");
+            }
             else if (level >= 3 && level < 5)
+            {
                 Console.WriteLine("[1] Holy fire             [2] Blast" +
                                 "\n[3] Flame Thrower");
+            }
             else if (level >= 5)
+            {
                 Console.WriteLine("[1] Holy fire             [2] Blast" +
                                 "\n[3] Flame Thrower         [4] Zenith(lvl 5)");
+            }
+
 
         }
 
