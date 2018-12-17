@@ -1,5 +1,4 @@
-﻿using System;
-namespace ProjetRPG.Story
+﻿namespace ProjetRPG.Story
 {
     public class Story
     {

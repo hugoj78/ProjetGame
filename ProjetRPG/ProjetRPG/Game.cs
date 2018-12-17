@@ -25,7 +25,6 @@ namespace ProjetRPG
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
                 inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
 
-
                 Choicebattle();
             }
            else if (pet == 1 && weapon == 2)
@@ -143,9 +142,6 @@ namespace ProjetRPG
                         Console.Clear();
                         Choicebattle();
                     }
-
-
-
                     break;
 
                 default:
