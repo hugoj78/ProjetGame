@@ -40,6 +40,19 @@ namespace ProjetRPG.PocketMonster
             }
         }
 
+        public static void PrintGlouGlouAttack(int level)
+        {
+            if (level < 3)
+                Console.WriteLine("[1] Holy fire             [2] Blast");
+            else if (level >= 3 && level < 5)
+                Console.WriteLine("[1] Holy fire             [2] Blast" +
+                                "\n[3] Flame Thrower");
+            else if (level >= 5)
+                Console.WriteLine("[1] Holy fire             [2] Blast" +
+                                "\n[3] Flame Thrower         [4] Zenith(lvl 5)");
+
+        }
+
 
 
         public static void PrintGlouglou()

@@ -11,7 +11,6 @@
     <Folder Include="Monster\" />
     <Folder Include="Player\" />
     <Folder Include="PocketMonster\" />
-    <Folder Include="Battle\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Object\Paper.cs" />
