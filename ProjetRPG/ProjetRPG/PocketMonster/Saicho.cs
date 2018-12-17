@@ -3,8 +3,21 @@ namespace ProjetRPG.PocketMonster
 {
     class Saicho : Player.Player
     {
-        public Saicho(int n):base(n)
+        public Saicho(int n) : base(n)
         {
+
+        }
+
+        public static void PrintSaichoAttack(int level)
+        {
+            if (level < 3)
+                Console.WriteLine("[1] Aquatail               [2] O'Pistol");
+            else if (level >= 3 && level < 5)
+                Console.WriteLine("[1] Aquatail               [2] O'Pistol" +
+                                "\n[3] O'Spray");
+            else if (level >= 5)
+                Console.WriteLine("[1] Aquatail               [2] O'Pistol" +
+                                "\n[3] O'Spray                [4] Siphon");
 
         }
 
