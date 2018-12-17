@@ -11,13 +11,12 @@ namespace ProjetRPG.Player
         public PocketMonster Pet;
         public Objet Item;
       
-        protected int Energie;
-
         protected int PV;
 
-        protected int Level;
+        public int Level;
 
         public Object.Inventaire[] Inventaire;
+        private int n;
 
         public Player(string n, PocketMonster p, Objet i)
         {
@@ -46,5 +45,9 @@ namespace ProjetRPG.Player
             }
         }
 
+        public Player(int n)
+        {
+            this.n = n;
+        }
     }
 }

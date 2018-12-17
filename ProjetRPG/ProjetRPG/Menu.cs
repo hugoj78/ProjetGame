@@ -128,7 +128,8 @@ namespace ProjetRPG
             PrintAskObject();
             int weapon = AskChoice(1, 4);
 
-            Game.ChoiceGame(name, pet, weapon);
+            Game g = new Game();
+            g.ChoiceGame(name, pet, weapon);
 
         }
 
