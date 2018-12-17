@@ -68,7 +68,7 @@ namespace ProjetRPG.Player
             return PV;
         }
 
-        public int Heal(int heal)
+        public int FullHeal(int heal)
         {
             PV = 150;
             {

@@ -14,9 +14,13 @@ namespace ProjetRPG.Object
             Value = v;
         }
 
+        public Inventaire()
+        {
+        }
+
         public void Print()
         {
-            Console.WriteLine(Name + " : " + Description);
+            Console.WriteLine(Name + " : " + Description + "(" + Value +")");
         }
 
         public virtual void PickUp()

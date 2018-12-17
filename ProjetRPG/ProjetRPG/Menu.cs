@@ -95,7 +95,7 @@ namespace ProjetRPG
             Console.Write("1. Pickle (Full Health)" +
                 "\n2. Pepper (Kill All Enemies)" +
                 "\n3. FriendZone (Nobody Can Touch You)" +
-                "\n4. Viagra (level-up directly)" +
+                "\n4. Viagra (Level-Up Directly)" +
                 "\nYour choice : ");
         }
 

@@ -1,10 +1,11 @@
 ﻿using System;
+
+
 namespace ProjetRPG
 {
     class Game
     {
-        //public Player.Player player;
-        //public Nav.Map plateau;
+        public Object.Inventaire[] inventaire;
 
         Player.Player P1;
 
@@ -15,37 +16,57 @@ namespace ProjetRPG
 
         public void ChoiceGame(string name, int pet, int weapon)
         {
-           if (pet == 1 && weapon == 1)
+            inventaire = new Object.Inventaire[10];
+
+
+
+            if (pet == 1 && weapon == 1)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
+                inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
+
+
+                Choicebattle();
             }
            else if (pet == 1 && weapon == 2)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pepper);
+                inventaire[0] = new Object.ItemStart("Pepper", "Item Legendaire :Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
+
             }
-           else if (pet == 1 && weapon == 3)
+            else if (pet == 1 && weapon == 3)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Friendzone);
+                inventaire[0] = new Object.ItemStart("Friendzone", "Item Legendaire : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
             }
            else if (pet == 1 && weapon == 4)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Viagra);
+                inventaire[0] = new Object.ItemStart("Viagra", "Item Legendaire : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
+
             }
-           else if (pet == 2 && weapon == 1)
+            else if (pet == 2 && weapon == 1)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pickle);
+                inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
+
             }
             else if (pet == 2 && weapon == 2)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pepper);
+                inventaire[0] = new Object.ItemStart("Pepper", "Item Legendaire : Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
+
             }
             else if (pet == 2 && weapon == 3)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Friendzone);
+                inventaire[0] = new Object.ItemStart("Friendzone", "Item Legendaire : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
             }
             else if (pet == 2 && weapon == 4)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Viagra);
+                inventaire[0] = new Object.ItemStart("Viagra", "Item Legendaire : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
+
             }
 
 
@@ -69,22 +90,37 @@ namespace ProjetRPG
         public void Choicebattle()
         {
             PrintMenuBattle();
+            Console.Write("Your Choice : ");
             int choix = Menu.AskChoice(1, 3);
 
             switch (choix)
             {
                 case 1:
-                    if (P1.Pet == Player.Player.PocketMonster.Glouglou)
+                    switch (P1.Pet)
                     {
-                        PocketMonster.Glouglou.PrintGlouGlouAttack(P1.Level);
-                    }
-                    else if (P1.Pet == Player.Player.PocketMonster.Saicho)
-                    {
-                        PocketMonster.Saicho.PrintSaichoAttack(P1.Level);
+                        case Player.Player.PocketMonster.Glouglou:
+                            PocketMonster.Glouglou.PrintGlouGlouAttack(P1.Level);
+                            break;
+                        case Player.Player.PocketMonster.Saicho:
+                            PocketMonster.Saicho.PrintSaichoAttack(P1.Level);
+                            break;
                     }
                     break;
 
                 case 2:
+
+                    for (int i = 0; i < inventaire.Rank; i++)
+                    {
+                        Console.Write((i + 1 ) + ". ");
+                        inventaire[i].Print();
+                    }
+
+
+                    Console.ReadLine();
+
+                    break;
+
+                case 3:
                     break;
 
                 default:
