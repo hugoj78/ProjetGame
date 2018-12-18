@@ -34,7 +34,6 @@ namespace ProjetRPG.Player
                 if (i == Objet.Pickle)
                 {
 
-
                 }
 
             } 

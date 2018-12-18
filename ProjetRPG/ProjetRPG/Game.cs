@@ -136,7 +136,7 @@ namespace ProjetRPG
                     }
                     else
                     {
-                        Console.Write("You try to run away ! But your ennemie keep you !" +
+                        Console.Write("You try to run away ! But your ennemie block you !" +
                         	"\nPress Enter To Continue...");
                         Console.ReadLine();
                         Console.Clear();
