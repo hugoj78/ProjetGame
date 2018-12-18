@@ -232,6 +232,10 @@ namespace ProjetRPG
   \_____/_/    \_\_|  |_|______|  \____/   \/   |______|_|  \_\
                                                                
                                                                ");
+                Console.Write("Press Enter To Quit...");
+                Console.ReadLine();
+                Environment.Exit(0);
+
             }
             return P1.PV;
         }

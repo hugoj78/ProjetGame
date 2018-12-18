@@ -127,7 +127,7 @@ namespace ProjetRPG.Story
                     break;
                 case 10:
                     Console.Clear();
-                    StoryObject("Block");
+                    StoryObject("block");
                     break;
                 case 11:
                     Console.Clear();
@@ -143,7 +143,7 @@ namespace ProjetRPG.Story
                     break;
                 case 14:
                     Console.Clear();
-                    StoryObject("Heal");
+                    StoryObject("heal");
                     break;
                 case 15:
                     Console.Clear();
@@ -155,7 +155,7 @@ namespace ProjetRPG.Story
                     break;
                 case 17:
                     Console.Clear();
-                    StoryObject("Level");
+                    StoryObject("level");
                     break;
                 case 18:
                     Console.Clear();
@@ -171,6 +171,7 @@ namespace ProjetRPG.Story
                     break;
                 case 21:
                     Console.Clear();
+                    StoryBoss();
                     StoryMonster(666, 50);
                     Console.Write("END");
                     Console.ReadLine();
@@ -226,6 +227,41 @@ namespace ProjetRPG.Story
             Console.ReadLine();
         }
 
+        public void StoryBoss()
+        {
+            Console.WriteLine(@"
+  ______   _                   _     ____                      
+ |  ____| (_)                 | |   |  _ \                     
+ | |__     _   _ __     __ _  | |   | |_) |   ___    ___   ___ 
+ |  __|   | | | '_ \   / _` | | |   |  _ <   / _ \  / __| / __|
+ | |      | | | | | | | (_| | | |   | |_) | | (_) | \__ \ \__ \
+ |_|      |_| |_| |_|  \__,_| |_|   |____/   \___/  |___/ |___/
+");
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(@"
+  ______   _                   _     ____                      
+ |  ____| (_)                 | |   |  _ \                     
+ | |__     _   _ __     __ _  | |   | |_) |   ___    ___   ___ 
+ |  __|   | | | '_ \   / _` | | |   |  _ <   / _ \  / __| / __|
+ | |      | | | | | | | (_| | | |   | |_) | | (_) | \__ \ \__ \
+ |_|      |_| |_| |_|  \__,_| |_|   |____/   \___/  |___/ |___/
+");
+            System.Threading.Thread.Sleep(500);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Clear(); Console.WriteLine(@"
+  ______   _                   _     ____                      
+ |  ____| (_)                 | |   |  _ \                     
+ | |__     _   _ __     __ _  | |   | |_) |   ___    ___   ___ 
+ |  __|   | | | '_ \   / _` | | |   |  _ <   / _ \  / __| / __|
+ | |      | | | | | | | (_| | | |   | |_) | | (_) | \__ \ \__ \
+ |_|      |_| |_| |_|  \__,_| |_|   |____/   \___/  |___/ |___/
+");
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+        }
+
 
         public void StoryMonster(int Pv, int Dmg)
         {
@@ -266,43 +302,5 @@ namespace ProjetRPG.Story
             else
                 Console.WriteLine("Congratulations You win against your enemies");
         }
-
-        public void Story3()
-        {
-
-        }
-        public void Story4()
-        {
-
-        }
-        public void Story5()
-        {
-
-        }
-        public void Story6()
-        {
-
-        }
-        public void Story7()
-        {
-
-        }
-        public void Story8()
-        {
-
-        }
-        public void Story9()
-        {
-
-        }
-        public void Story10()
-        {
-
-        }
-        public void Story11()
-        {
-
-        }
-
     }
 }
