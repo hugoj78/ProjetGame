@@ -185,7 +185,7 @@ namespace ProjetRPG
         {
             P1.Count_Inventaire += 1;
 
-            inventaire[P1.Count_Inventaire] = new Object.Item("Heal +", "Item Commun : Heal Your Friend 20pv ", 1, Object.Item.ItemType.HealUp);
+            inventaire[P1.Count_Inventaire] = new Object.Item("HealUp", "Item Commun : Restore ALL PV Of Your PocketMonster ", 1, Object.Item.ItemType.HealUp);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }
@@ -272,6 +272,33 @@ namespace ProjetRPG
             }
         }
 
+        public void StoryChoice20()
+        {
+
+            int choice = Menu.AskChoice(1, 2);
+
+            switch (choice)
+            {
+                case 1:
+                    P1.Position += 1;
+                    break;
+                case 2:
+                    for (int i = 0; i <= P1.Count_Inventaire; i++)
+                    {
+                        Console.Write((i + 1) + ". ");
+                        inventaire[i].Print();
+                    }
+
+                    // TODO ASKCHOICE QUELLE POTION UTILISER
+                    // TODO FONCTION USE QUI EXISTE DEJA
+                    // TODO FUnction POUR VIRER UNE VALUE;
+                    // SI VALUE == 0 alors delete objet
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void Histoire()
         {
 
@@ -279,15 +306,19 @@ namespace ProjetRPG
 
             story.Story1();
 
-            //TODO POSITION 20 NE PERMET PAS DE SKIP
-            // je crois ca marche deja a check
-
             while (P1.Position != 21)
             {
 
                 story.MoveChoice(P1.Position);
 
-                StoryChoice();
+                if (P1.Position == 20)
+                {
+                    StoryChoice20();
+                }
+                else
+                {
+                    StoryChoice();
+                }
 
                 story.StartStory(P1.Position);
 

@@ -22,6 +22,16 @@ namespace ProjetRPG.Story
                 "\n2. Continue" +
                 "\n3. Use Object" +
                 "\nYour choice : ");
+
+            if (position == 20)
+            {
+                Console.WriteLine("\nYour Postion : " + position);
+
+                Console.Write("You can't skip the next position THIS IS THE FINAL BOSS" +
+                    "\n1. FIGHT" +
+                    "\n2. Use Object" +
+                    "\nYour choice : ");
+            }
         }
 
         public void StartMap()
@@ -50,6 +60,7 @@ namespace ProjetRPG.Story
 
         public void StartStory(int position)
         {
+            //TODO AJOUTER LES LEVEL UP DES POCKETMONSTER
             switch (position)
             {
                 case 2:
@@ -58,11 +69,11 @@ namespace ProjetRPG.Story
                     break;
                 case 3:
                     Console.Clear();
-                    StoryMonster(35, 10);
+                    StoryMonster(35, 7);
                     break;
                 case 4:
                     Console.Clear();
-                    StoryMonster(50,10);
+                    StoryMonster(50,9);
                     break;
                 case 5:
                     Console.Clear();
@@ -70,7 +81,7 @@ namespace ProjetRPG.Story
                     break;
                 case 6:
                     Console.Clear();
-                    StoryMonster(40, 10);
+                    StoryMonster(40, 6);
                     break;
                 case 7:
                     Console.Clear();
@@ -78,60 +89,91 @@ namespace ProjetRPG.Story
                     Console.WriteLine(@"
                        _.-**-._
                     _,(        ),_
-                 .-   '-^----'    -.
-              .-'                   '-.
-            .'                         '.
-          .'    __.--**'""""""'**--.__   '.
-         /_.-*'__.--**'""""""'**--.__'*-.__\
-        /_..-*'                      '*-..__\
-       :              -_      _-             ;
-       :                -..-                 ;
-        \               _-''-_              /
-         \            -'      '.           /
+                 .-""   '-^----'   ""-.
+              .-'                    '-.
+            .'                          '.
+          .'    __.--**'""""""""""""'**--.__    '.
+         /_.-*""'__.--**'""""""""""""'**--.__'""*-._\
+        /_..-*""'                      '""*-.._\
+       :              -_      _-              ;
+       :                ""-..-""                ;
+        \               _-''-_               /
+         \            -'      '.            /
       .-*''.                              .'-.
    .-'      '.                          .'    '.
   :           '-.        _.._        .-'        '._
- ;*-._          '-._  --___ '   _.-'        _.*'  '*.
-:      '.            `*-.__.-*`           (        :
+ ;""*-._          '-._  --___ '   _.-'        _.*'  '*.
+:      '.            `""*-.__.-*""`           (        :
  ;      ;                 *|                 '-.     ;
-  '---*'                   |                    ""--'
+  '---*'                   |                    """"--'
    :                      *|                      :
    '.                      |                     .'
      '.._                 *|        ____----.._-'
-      \  ""----_____------'-----""         /
+      \  """"""----_____------'-----""""""         /
        \  __..-------.._        ___..---._  /
-       :'              '-..--''          ';
-        '""""""""""""""""' '""""""""""""""'
-    ");
+       :'""              '-..--''          ""';
+        '""""""""""""""""""""""""""""""""' '""""""""""""""""""""""""""""""'");
+                    Console.Write("Press Enter To Continue ...");
+                    Console.ReadLine();
                     StoryObject("HealUp");
                     break;
                 case 8:
+                    Console.Clear();
+                    StoryMonster(60, 2);
                     break;
                 case 9:
+                    Console.Clear();
+                    StoryMonster(40, 11);
                     break;
                 case 10:
+                    Console.Clear();
+                    StoryObject("Block");
                     break;
                 case 11:
+                    Console.Clear();
+                    StoryMonster(80, 12);
                     break;
                 case 12:
+                    Console.Clear();
+                    StoryMonster(80,13);
                     break;
                 case 13:
+                    Console.Clear();
+                    StoryMonster(80,14);
                     break;
                 case 14:
+                    Console.Clear();
+                    StoryObject("Heal");
                     break;
                 case 15:
+                    Console.Clear();
+                    StoryMonster(80,15);
                     break;
                 case 16:
+                    Console.Clear();
+                    StoryMonster(50,25);
                     break;
                 case 17:
+                    Console.Clear();
+                    StoryObject("Level");
                     break;
                 case 18:
+                    Console.Clear();
+                    StoryMonster(200, 30);
                     break;
                 case 19:
+                    Console.Clear();
+                    StoryMonster(80, 22);
                     break;
                 case 20:
+                    Console.Clear();
+                    StoryObject("HealUp");
                     break;
                 case 21:
+                    Console.Clear();
+                    StoryMonster(666, 50);
+                    Console.Write("END");
+                    Console.ReadLine();
                     break;
                 default:
                     break;

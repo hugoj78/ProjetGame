@@ -18,9 +18,9 @@ namespace ProjetRPG.PocketMonster
                 case 2:
                     return 15;
                 case 3:
-                    return 20;
-                case 4:
                     return 25;
+                case 4:
+                    return 50;
                 default:
                     return 0;
             }
@@ -30,13 +30,16 @@ namespace ProjetRPG.PocketMonster
         {
 
             if (level < 3)
-                Console.WriteLine("[1] Aquatail               [2] O'Pistol");
+                Console.Write("[1] Aquatail(10)           [2] O'Pistol(15)" +
+                	"\nYour Choice : ");
             else if (level >= 3 && level < 5)
-                Console.WriteLine("[1] Aquatail               [2] O'Pistol" +
-                                "\n[3] O'Spray");
+                Console.Write("[1] Aquatail(10)           [2] O'Pistol(15)" +
+                                "\n[3] O'Spray(20)" +
+                                "\nYour Choice : ");
             else if (level >= 5)
-                Console.WriteLine("[1] Aquatail               [2] O'Pistol" +
-                                "\n[3] O'Spray                [4] Siphon");
+                Console.Write("[1] Aquatail(10)           [2] O'Pistol(15)" +
+                                "\n[3] O'Spray(25)            [4] Siphon(50)" +
+                                "\nYour Choice : ");
         }
 
 

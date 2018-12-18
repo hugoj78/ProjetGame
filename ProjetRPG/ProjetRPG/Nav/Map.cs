@@ -20,9 +20,9 @@ Kkx;     ;xo.                   fdsfsdfqdfsq.xl;dddxl.    .okc.                 
 Kkx;     .dl.  6.               .;;;;;''''''cOdcoolo:.    .oko;;,,;  ..;;.      ,dd'     .;;;;:dkl.             .  ;kxc;;;;;;;;::   .lko:
 KOx;     .:;......:llllllc,     .cclddc:cloloOxodolc,.    .coldxc..  .:xk;    ..;do'     ;xddxxxko'.               'llclldxdolllo   .lko:
 Kkx; 3.                'oo'  8.    ,ddoddooc,dl;ddddc.               ddkx;   .lddxo. 15. ;ddddxxkdodc.                              .oko:
-Kkx;               2.  .,:;     .;;,',okxdxl,dl:xddxl.    .:o:,  .'.'.:xx;   'odddo'     ;xddddlccoxdlc,              20.        .;::oko:
-Kkxc..............     .lx:     'c:.  ,lc:c;,dlckxdxl.    .okc.  ...  ,xk;   'dxdlc.     'ccloc:c:ldoodc...                ......,cccdko;
-Kkxkxxxxxxxxxxxxkl.    .lx:                 .xlckxddc.    .okc.  lx;  ,xx,   ,xk;           .'.:x:cx:;:;ld,        ;dxxxdxxdxxdxxl. .lko;
+Kkx;               2.  .,:;     .;;,',okxdxl,dl:xddxl.    .:o:,  .'.'.:xx;   'odddo'     ;xddddlccoxdlc,        ;;;;..           .;::oko:
+Kkxc..............     .lx:     'c:.  ,lc:c;,dlckxdxl.    .okc.  ...  ,xk;   'dxdlc.     'ccloc:c:ldoodc...      ..;;...   ......,cccdko;
+Kkxkxxxxxxxxxxxxkl.    .lx:                 .xlckxddc.    .okc.  lx;  ,xx,   ,xk;           .'.:x:cx:;:;ld,   20.  ;dxxxdxxdxxdxxl. .lko;
 KOxc..........'cxl.    .lx:       9.        .dlckd,..     .okc.  lx:   ..    ,xk;   ';;;;;;;:::oOdodlcc:clcc:.     :xo,...........  .lko;
 0kx;  START     ':,    .lx:                 'oloko.       .okc.  lx:         'xx,  .':oxddxdxxodOdldl:;,'.,:;.                      .lko;
 KOx;                   .lx:.    ;ddodd                    .okc.  lxc.  14.   ,dd'    .cxddxxxxclx:cxc.            21.               .lko;
