@@ -85,7 +85,7 @@ namespace ProjetRPG
         }
 
 
-        public void Choicebattle()
+        public int Choicebattle()
         {
             PrintMenuBattle();
             Console.Write("Your Choice : ");
@@ -97,14 +97,24 @@ namespace ProjetRPG
                     switch (P1.Pet)
                     {
                         case Player.Player.PocketMonster.Glouglou:
+
                             PocketMonster.Glouglou.PrintGlouGlouAttack(P1.Level);
-                            break;
+
+                            int AskAtt = Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
+
+                            int Att = PocketMonster.Glouglou.AttackGlouglou(AskAtt);
+                            return Att;
+
                         case Player.Player.PocketMonster.Saicho:
+
                             PocketMonster.Saicho.PrintSaichoAttack(P1.Level);
-                            Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
-                            break;
+
+                            int AskAtt2 = Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
+
+                            int Att2 = PocketMonster.Saicho.AttackGlouglou(AskAtt2);
+                            return Att2;
                     }
-                    break;
+                    return 0;
 
                 case 2:
 
@@ -122,7 +132,7 @@ namespace ProjetRPG
                     Console.Clear();
                     Choicebattle();
 
-                    break;
+                    return 0;
 
                 case 3:
 
@@ -130,6 +140,7 @@ namespace ProjetRPG
                     {
                         // TODO QUITTE LE COMBAT
                         // TODO MAIS NE l'EVITE PAS PLUS TARD
+                        return 0;
                     }
                     else
                     {
@@ -139,10 +150,10 @@ namespace ProjetRPG
                         Console.Clear();
                         Choicebattle();
                     }
-                    break;
+                    return 0;
 
                 default:
-                    break;
+                    return 0;
             }
         }
 
@@ -165,6 +176,30 @@ namespace ProjetRPG
             inventaire[1].PickUp();
         }
 
+        public int Damage(int degats)
+        {
+            P1.PV -= degats;
+
+            if (P1.PV <= 0)
+            {
+                Console.WriteLine(@"
+   _____          __  __ ______    ______      ________ _____  
+  / ____|   /\   |  \/  |  ____|  / __ \ \    / /  ____|  __ \ 
+ | |  __   /  \  | \  / | |__    | |  | \ \  / /| |__  | |__) |
+ | | |_ | / /\ \ | |\/| |  __|   | |  | |\ \/ / |  __| |  _  / 
+ | |__| |/ ____ \| |  | | |____  | |__| | \  /  | |____| | \ \ 
+  \_____/_/    \_\_|  |_|______|  \____/   \/   |______|_|  \_\
+                                                               
+                                                               ");
+            }
+            return P1.PV;
+        }
+
+        public int PV()
+        {
+            return P1.PV;
+        }
+
 
         public void Histoire()
         {
@@ -173,7 +208,7 @@ namespace ProjetRPG
 
             story.Story1();
 
-            int choice = Menu.AskChoice(1, 2);
+            int choice = Menu.AskChoice(1, 3);
 
             switch (choice)
             {
@@ -181,7 +216,21 @@ namespace ProjetRPG
                     story.Story3();
                     break;
                 case 2:
-                    story.Story2(P1.Level);
+                    story.Story2();
+                    break;
+                case 3:
+                    for (int i = 0; i < inventaire.Rank; i++)
+                    {
+                        Console.Write((i + 1) + ". ");
+                        inventaire[i].Print();
+                    }
+
+                    // TODO ASKCHOICE QUELLE POTION UTILISER
+                    // TODO FONCTION USE QUI EXISTE DEJA
+                    // TODO FUnction POUR VIRER UNE VALUE;
+                    // SI VALUE == 0 alors delete objet
+                    Console.ReadLine();
+                    Console.Clear();
                     break;
                 default:
                     break;

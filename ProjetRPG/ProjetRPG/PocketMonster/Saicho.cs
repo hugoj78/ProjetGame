@@ -11,14 +11,19 @@ namespace ProjetRPG.PocketMonster
         public static void PrintSaichoAttack(int level)
         {
             if (level < 3)
-                Console.WriteLine("[1] Aquatail               [2] O'Pistol");
+            {
+                Console.WriteLine("[1] Holy fire             [2] Blast");
+            }
             else if (level >= 3 && level < 5)
-                Console.WriteLine("[1] Aquatail               [2] O'Pistol" +
-                                "\n[3] O'Spray");
+            {
+                Console.WriteLine("[1] Holy fire             [2] Blast" +
+                                "\n[3] Flame Thrower");
+            }
             else if (level >= 5)
-                Console.WriteLine("[1] Aquatail               [2] O'Pistol" +
-                                "\n[3] O'Spray                [4] Siphon");
-
+            {
+                Console.WriteLine("[1] Holy fire             [2] Blast" +
+                                "\n[3] Flame Thrower         [4] Zenith(lvl 5)");
+            }
         }
 
         public static int AttackGlouglou(int choice)

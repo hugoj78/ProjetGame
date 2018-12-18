@@ -11,7 +11,7 @@ namespace ProjetRPG.Player
         public PocketMonster Pet;
         public Objet Item;
       
-        protected int PV;
+        public int PV;
       
         public int Level;
 
@@ -40,24 +40,6 @@ namespace ProjetRPG.Player
         public Player(int n)
         {
             this.n = n;
-        }
-
-        public int Damage(int degats)
-        {
-            PV =- degats;
-
-            if (PV == 0)
-            {
-                Console.WriteLine(@"   _____          __  __ ______    ______      ________ _____  
-                                      / ____|   /\   |  \/  |  ____|  / __ \ \    / /  ____|  __ \ 
-                                     | |  __   /  \  | \  / | |__    | |  | \ \  / /| |__  | |__) |
-                                     | | |_ | / /\ \ | |\/| |  __|   | |  | |\ \/ / |  __| |  _  / 
-                                     | |__| |/ ____ \| |  | | |____  | |__| | \  /  | |____| | \ \ 
-                                      \_____/_/    \_\_|  |_|______|  \____/   \/   |______|_|  \_\
-                                                               
-                                                               ");
-            }
-            return PV;
         }
 
         public int FullHeal(int heal)

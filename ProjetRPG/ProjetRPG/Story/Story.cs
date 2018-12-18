@@ -17,6 +17,7 @@ namespace ProjetRPG.Story
                 "\n Becareful ! You need to Level Up your PocketMonster and skip a position won't give you experience" +
                 "\n\n1.Skip Position" +
                 "\n2. Continue" +
+                "\n3. Use Object" +
                 "\nYour choice : ");
         }
 
@@ -59,41 +60,31 @@ namespace ProjetRPG.Story
 
         }
 
-        public void Story2(int level)
+        public void Story2()
         {
             int PV = 30;
 
-            while(PV != 0)
+            while(PV > 0)
             {
                 Monster.Monster.PrintMonsterStory2();
                 Monster.Monster.PrintMonsterPV(PV);
 
 
-                g.Choicebattle();
+                Console.WriteLine("YOUR PV : " + g.PV());
+                int attaque = g.Choicebattle();
 
-                int AskAtt = Menu.AskChoice(1, Player.Player.AskAttack(level));
+                PV -= attaque;
 
-                int Att = PocketMonster.Glouglou.AttackGlouglou(AskAtt);
+
+                Monster.Monster.PrintPhraseAtt();
+
+                g.Damage(5);
+
+                Console.WriteLine("YOUR PV : " + g.PV());
 
             }
-
-
 
             MoveChoice();
-
-            int choice = Menu.AskChoice(1, 2);
-
-            switch (choice)
-            {
-                case 1:
-                    Story4();
-                    break;
-                case 2:
-                    Story3();
-                    break;
-                default:
-                    break;
-            }
         }
 
         public void Story3()
