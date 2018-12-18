@@ -12,9 +12,9 @@ namespace ProjetRPG.Player
         public Objet Item;
       
         public int PV;
-      
         public int Level;
-
+        public int Count_Inventaire;
+        public int Position;
        
         private int n;
 
@@ -23,6 +23,10 @@ namespace ProjetRPG.Player
             Name = na;
             Pet = p;
             Item = i;
+
+            Count_Inventaire = 0;
+            Position = 1;
+
 
             if (p == PocketMonster.Saicho)
             {

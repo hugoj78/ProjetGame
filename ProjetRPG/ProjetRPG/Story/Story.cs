@@ -14,8 +14,8 @@ namespace ProjetRPG.Story
         public void MoveChoice()
         {
             Console.Write("You can skip the next position and skip a monster :) or an object :/" +
-                "\n Becareful ! You need to Level Up your PocketMonster and skip a position won't give you experience" +
-                "\n\n1.Skip Position" +
+                "\nBecareful ! You need to Level Up your PocketMonster and skip a position won't give you experience" +
+                "\n\n1. Skip Position" +
                 "\n2. Continue" +
                 "\n3. Use Object" +
                 "\nYour choice : ");
@@ -45,6 +45,57 @@ namespace ProjetRPG.Story
 
         }
 
+        public void StartStory(int position)
+        {
+            switch (position)
+            {
+                case 2:
+                    StoryMonster(30, 5);
+                    break;
+                case 3:
+                    StoryMonster(35, 10);
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+                case 11:
+                    break;
+                case 12:
+                    break;
+                case 13:
+                    break;
+                case 14:
+                    break;
+                case 15:
+                    break;
+                case 16:
+                    break;
+                case 17:
+                    break;
+                case 18:
+                    break;
+                case 19:
+                    break;
+                case 20:
+                    break;
+                case 21:
+                    break;
+                default:
+                    break;
+            }
+        }
+
         public void Story1()
         {
             Console.Clear();
@@ -54,19 +105,34 @@ namespace ProjetRPG.Story
 
             Console.WriteLine("Congratulations");
 
-            g.AddItem();
+            g.AddItemHeal();
 
             MoveChoice();
 
         }
 
-        public void Story2()
+        public void StoryObject(int position)
         {
-            int PV = 30;
+            Console.Clear();
+
+            Console.Clear();
+            Nav.Map.PrintMap();
+
+            Console.WriteLine("\nYour Postion : " + position);
+
+            Console.WriteLine("Congratulations");
+
+            g.AddItemHeal();
+        }
+
+
+        public void StoryMonster(int Pv, int Dmg)
+        {
+            int PV = Pv;
 
             while(PV > 0)
             {
-                Monster.Monster.PrintMonsterStory2();
+                Monster.Monster.PrintMonsterStory(Dmg);
                 Monster.Monster.PrintMonsterPV(PV);
 
 
@@ -75,14 +141,23 @@ namespace ProjetRPG.Story
 
                 PV -= attaque;
 
+                if (PV > 0)
+                {
+                    Monster.Monster.PrintPhraseAtt();
 
-                Monster.Monster.PrintPhraseAtt();
+                    g.Damage(Dmg);
 
-                g.Damage(5);
-
-                Console.WriteLine("YOUR PV : " + g.PV());
-
+                    Console.WriteLine("YOUR PV : " + g.PV());
+                }
             }
+
+            if (Dmg == 5)
+            {
+                Console.WriteLine("OMG YOU KILLED KENNY ! YOU BASTARD");
+                Console.WriteLine("Congratulations You win against your first enemies");
+            }
+            else
+                Console.WriteLine("Congratulations You win against your enemies");
 
             MoveChoice();
         }

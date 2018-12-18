@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace ProjetRPG
 {
     class Game
@@ -14,16 +13,19 @@ namespace ProjetRPG
         public Game()
         {
             inventaire = new Object.Inventaire[10];
+
             story = new Story.Story(this);
+
         }
+
 
         public void ChoiceGame(string name, int pet, int weapon)
         {
+
             if (pet == 1 && weapon == 1)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
                 inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
-
             }
            else if (pet == 1 && weapon == 2)
             {
@@ -35,8 +37,9 @@ namespace ProjetRPG
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Friendzone);
                 inventaire[0] = new Object.ItemStart("Friendzone", "Item Legendaire : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
+
             }
-           else if (pet == 1 && weapon == 4)
+            else if (pet == 1 && weapon == 4)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Viagra);
                 inventaire[0] = new Object.ItemStart("Viagra", "Item Legendaire : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
@@ -58,6 +61,7 @@ namespace ProjetRPG
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Friendzone);
                 inventaire[0] = new Object.ItemStart("Friendzone", "Item Legendaire : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
+
             }
             else if (pet == 2 && weapon == 4)
             {
@@ -117,8 +121,7 @@ namespace ProjetRPG
                     return 0;
 
                 case 2:
-
-                    for (int i = 0; i < inventaire.Rank; i++)
+                    for (int i = 0; i <= P1.Count_Inventaire; i++)
                     {
                         Console.Write((i + 1 ) + ". ");
                         inventaire[i].Print();
@@ -129,8 +132,8 @@ namespace ProjetRPG
                     // TODO FUnction POUR VIRER UNE VALUE;
                     // SI VALUE == 0 alors delete objet
                     Console.ReadLine();
+                    Console.ReadLine();
                     Console.Clear();
-                    Choicebattle();
 
                     return 0;
 
@@ -169,11 +172,13 @@ namespace ProjetRPG
             return false;
         }
 
-        public void AddItem()
+        public void AddItemHeal()
         {
-            inventaire[1] = new Object.ItemStart("?", "Item Commun : ? ", 1, Object.ItemStart.ItemType.Pickle);
+            P1.Count_Inventaire += 1;
 
-            inventaire[1].PickUp();
+            inventaire[P1.Count_Inventaire] = new Object.Item("Heal", "Item Commun : Heal Your Friend 10pv ", 1, Object.Item.ItemType.Heal);
+
+            inventaire[P1.Count_Inventaire].PickUp();
         }
 
         public int Damage(int degats)
@@ -200,26 +205,22 @@ namespace ProjetRPG
             return P1.PV;
         }
 
-
-        public void Histoire()
+        public void StoryChoice()
         {
-
-            story.StartMap();
-
-            story.Story1();
 
             int choice = Menu.AskChoice(1, 3);
 
             switch (choice)
             {
                 case 1:
-                    story.Story3();
+                    P1.Position += 2;
                     break;
                 case 2:
-                    story.Story2();
+                    P1.Position += 1;
                     break;
                 case 3:
-                    for (int i = 0; i < inventaire.Rank; i++)
+
+                    for (int i = 0; i <= P1.Count_Inventaire; i++)
                     {
                         Console.Write((i + 1) + ". ");
                         inventaire[i].Print();
@@ -229,11 +230,24 @@ namespace ProjetRPG
                     // TODO FONCTION USE QUI EXISTE DEJA
                     // TODO FUnction POUR VIRER UNE VALUE;
                     // SI VALUE == 0 alors delete objet
-                    Console.ReadLine();
-                    Console.Clear();
                     break;
                 default:
                     break;
+            }
+        }
+
+        public void Histoire()
+        {
+
+            story.StartMap();
+
+            story.Story1();
+
+            while (P1.Position != 21)
+            {
+                StoryChoice();
+
+                story.StartStory(P1.Position);
             }
         }
 
