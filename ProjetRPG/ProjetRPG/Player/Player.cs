@@ -15,26 +15,19 @@ namespace ProjetRPG.Player
       
         public int Level;
 
-        public Object.Inventaire[] Inventaire;
+       
         private int n;
 
-        public Player(string n, PocketMonster p, Objet i)
+        public Player(string na, PocketMonster p, Objet i)
         {
-            Name = n;
+            Name = na;
             Pet = p;
             Item = i;
-
-            Inventaire = new Object.Inventaire[10];
 
             if (p == PocketMonster.Saicho)
             {
                 PV = 100;
                 Level = 1;
-
-                if (i == Objet.Pickle)
-                {
-
-                }
 
             } 
             else if (p == PocketMonster.Glouglou)

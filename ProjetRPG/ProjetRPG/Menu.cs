@@ -101,6 +101,7 @@ namespace ProjetRPG
 
         public static int AskChoice(int min, int max)
         {
+        
             int result = int.Parse(Console.ReadLine());
 
             while (result > max || result < min)

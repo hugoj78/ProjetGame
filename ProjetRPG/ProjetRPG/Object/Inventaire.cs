@@ -25,7 +25,7 @@ namespace ProjetRPG.Object
 
         public virtual void PickUp()
         {
-            Console.WriteLine("You got:" + Name);
+            Console.WriteLine("You got: " + Name + " ( " + Description + ")");
         }
 
         public virtual void Use()

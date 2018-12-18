@@ -7,25 +7,23 @@ namespace ProjetRPG
     {
         public Object.Inventaire[] inventaire;
 
+        public Story.Story story;
+
         Player.Player P1;
 
         public Game()
         {
-            //TODO Construteur game a faire
+            inventaire = new Object.Inventaire[10];
+            story = new Story.Story(this);
         }
 
         public void ChoiceGame(string name, int pet, int weapon)
         {
-            inventaire = new Object.Inventaire[10];
-
-
-
             if (pet == 1 && weapon == 1)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
                 inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
 
-                Choicebattle();
             }
            else if (pet == 1 && weapon == 2)
             {
@@ -68,6 +66,7 @@ namespace ProjetRPG
 
             }
 
+            Histoire();
 
         }
 
@@ -99,8 +98,6 @@ namespace ProjetRPG
                     {
                         case Player.Player.PocketMonster.Glouglou:
                             PocketMonster.Glouglou.PrintGlouGlouAttack(P1.Level);
-                            Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
-
                             break;
                         case Player.Player.PocketMonster.Saicho:
                             PocketMonster.Saicho.PrintSaichoAttack(P1.Level);
@@ -160,5 +157,36 @@ namespace ProjetRPG
 
             return false;
         }
+
+        public void AddItem()
+        {
+            inventaire[1] = new Object.ItemStart("?", "Item Commun : ? ", 1, Object.ItemStart.ItemType.Pickle);
+
+            inventaire[1].PickUp();
+        }
+
+
+        public void Histoire()
+        {
+
+            story.StartMap();
+
+            story.Story1();
+
+            int choice = Menu.AskChoice(1, 2);
+
+            switch (choice)
+            {
+                case 1:
+                    story.Story3();
+                    break;
+                case 2:
+                    story.Story2(P1.Level);
+                    break;
+                default:
+                    break;
+            }
+        }
+
     }
 }
