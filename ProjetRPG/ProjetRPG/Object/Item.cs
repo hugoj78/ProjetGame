@@ -3,7 +3,7 @@ namespace ProjetRPG.Object
 {
     public class Item : Inventaire
     {
-        public enum ItemType { Heal, Dmg, Level, block };
+        public enum ItemType { Heal, Dmg, Level, block, HealUp };
 
         public ItemType Type;
         public Item(string name, string descript, float v, ItemType t) : base(name, descript, v)

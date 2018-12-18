@@ -181,6 +181,42 @@ namespace ProjetRPG
             inventaire[P1.Count_Inventaire].PickUp();
         }
 
+        public void AddItemHealUp()
+        {
+            P1.Count_Inventaire += 1;
+
+            inventaire[P1.Count_Inventaire] = new Object.Item("Heal +", "Item Commun : Heal Your Friend 20pv ", 1, Object.Item.ItemType.HealUp);
+
+            inventaire[P1.Count_Inventaire].PickUp();
+        }
+
+        public void AddItemDmg()
+        {
+            P1.Count_Inventaire += 1;
+
+            inventaire[P1.Count_Inventaire] = new Object.Item("Damage", "Item Rare : Make 20 dmg to your oppenent ", 1, Object.Item.ItemType.Dmg);
+
+            inventaire[P1.Count_Inventaire].PickUp();
+        }
+
+        public void AddItemLevel()
+        {
+            P1.Count_Inventaire += 1;
+
+            inventaire[P1.Count_Inventaire] = new Object.Item("Level Up", "Item Rare : Level Up your PocketMonster ", 1, Object.Item.ItemType.Level);
+
+            inventaire[P1.Count_Inventaire].PickUp();
+        }
+
+        public void AddItemBlock()
+        {
+            P1.Count_Inventaire += 1;
+
+            inventaire[P1.Count_Inventaire] = new Object.Item("Block", "Item Epic : Block your ennemies Attack ", 1, Object.Item.ItemType.Dmg);
+
+            inventaire[P1.Count_Inventaire].PickUp();
+        }
+
         public int Damage(int degats)
         {
             P1.PV -= degats;

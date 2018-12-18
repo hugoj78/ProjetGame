@@ -62,7 +62,7 @@ namespace ProjetRPG.Story
                     break;
                 case 4:
                     Console.Clear();
-                    StoryObject();
+                    StoryObject("heal");
                     break;
                 case 5:
                     break;
@@ -120,7 +120,7 @@ namespace ProjetRPG.Story
 
         }
 
-        public void StoryObject()
+        public void StoryObject(string type)
         {
             Console.Clear();
 
@@ -131,7 +131,24 @@ namespace ProjetRPG.Story
 
             Console.WriteLine("Congratulations");
 
-            g.AddItemHeal();
+            switch (type)
+            {
+                case "heal":
+                    g.AddItemHeal();
+                    break;
+                case "dmg":
+                    g.AddItemDmg();
+                    break;
+                case "level":
+                    g.AddItemLevel();
+                    break;
+                case "block":
+                    g.AddItemBlock();
+                    break;
+                case "HealUp":
+                    g.AddItemHealUp();
+                    break;
+            }
         }
 
 
