@@ -279,10 +279,8 @@ namespace ProjetRPG
 
             story.Story1();
 
-            story.MoveChoice(P1.Position);
-
-
             //TODO POSITION 20 NE PERMET PAS DE SKIP
+            // je crois ca marche deja a check
 
             while (P1.Position != 21)
             {

@@ -19,5 +19,6 @@
     <Compile Remove="Object\Pepper.cs" />
     <Compile Remove="Object\Pickle.cs" />
     <Compile Remove="Object\Friendzone.cs" />
+    <Compile Remove="Nav\Case.cs" />
   </ItemGroup>
 </Project>

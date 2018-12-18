@@ -62,13 +62,48 @@ namespace ProjetRPG.Story
                     break;
                 case 4:
                     Console.Clear();
-                    StoryObject("heal");
+                    StoryMonster(50,10);
                     break;
                 case 5:
+                    Console.Clear();
+                    StoryObject("dmg");
                     break;
                 case 6:
+                    Console.Clear();
+                    StoryMonster(40, 10);
                     break;
                 case 7:
+                    Console.Clear();
+                    StoryMonster(150, 10);
+                    Console.WriteLine(@"
+                       _.-**-._
+                    _,(        ),_
+                 .-   '-^----'    -.
+              .-'                   '-.
+            .'                         '.
+          .'    __.--**'""""""'**--.__   '.
+         /_.-*'__.--**'""""""'**--.__'*-.__\
+        /_..-*'                      '*-..__\
+       :              -_      _-             ;
+       :                -..-                 ;
+        \               _-''-_              /
+         \            -'      '.           /
+      .-*''.                              .'-.
+   .-'      '.                          .'    '.
+  :           '-.        _.._        .-'        '._
+ ;*-._          '-._  --___ '   _.-'        _.*'  '*.
+:      '.            `*-.__.-*`           (        :
+ ;      ;                 *|                 '-.     ;
+  '---*'                   |                    ""--'
+   :                      *|                      :
+   '.                      |                     .'
+     '.._                 *|        ____----.._-'
+      \  ""----_____------'-----""         /
+       \  __..-------.._        ___..---._  /
+       :'              '-..--''          ';
+        '""""""""""""""""' '""""""""""""""'
+    ");
+                    StoryObject("HealUp");
                     break;
                 case 8:
                     break;
@@ -124,11 +159,6 @@ namespace ProjetRPG.Story
         {
             Console.Clear();
 
-            Console.Clear();
-            Nav.Map.PrintMap();
-
-            Console.WriteLine("\nYour Postion : ");
-
             Console.WriteLine("Congratulations");
 
             switch (type)
@@ -149,6 +179,9 @@ namespace ProjetRPG.Story
                     g.AddItemHealUp();
                     break;
             }
+
+            Console.Write("Press Enter To Continue ...");
+            Console.ReadLine();
         }
 
 
