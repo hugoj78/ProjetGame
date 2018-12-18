@@ -243,11 +243,20 @@ namespace ProjetRPG
 
             story.Story1();
 
+            story.MoveChoice(P1.Position);
+
+
+            //TODO POSITION 20 NE PERMET PAS DE SKIP
+
             while (P1.Position != 21)
             {
+
+                story.MoveChoice(P1.Position);
+
                 StoryChoice();
 
                 story.StartStory(P1.Position);
+
             }
         }
 

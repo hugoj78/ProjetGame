@@ -11,8 +11,11 @@ namespace ProjetRPG.Story
             g = game;
         }
 
-        public void MoveChoice()
+        public void MoveChoice(int position)
         {
+            Nav.Map.PrintMap();
+            Console.WriteLine("\nYour Postion : " + position) ;
+
             Console.Write("You can skip the next position and skip a monster :) or an object :/" +
                 "\nBecareful ! You need to Level Up your PocketMonster and skip a position won't give you experience" +
                 "\n\n1. Skip Position" +
@@ -50,12 +53,16 @@ namespace ProjetRPG.Story
             switch (position)
             {
                 case 2:
+                    Console.Clear();
                     StoryMonster(30, 5);
                     break;
                 case 3:
+                    Console.Clear();
                     StoryMonster(35, 10);
                     break;
                 case 4:
+                    Console.Clear();
+                    StoryObject();
                     break;
                 case 5:
                     break;
@@ -107,18 +114,20 @@ namespace ProjetRPG.Story
 
             g.AddItemHeal();
 
-            MoveChoice();
+            Console.WriteLine("Press Enter To Continue ...");
+            Console.Read();
+            Console.Clear();
 
         }
 
-        public void StoryObject(int position)
+        public void StoryObject()
         {
             Console.Clear();
 
             Console.Clear();
             Nav.Map.PrintMap();
 
-            Console.WriteLine("\nYour Postion : " + position);
+            Console.WriteLine("\nYour Postion : ");
 
             Console.WriteLine("Congratulations");
 
@@ -143,11 +152,17 @@ namespace ProjetRPG.Story
 
                 if (PV > 0)
                 {
+                    Console.Clear();
+
                     Monster.Monster.PrintPhraseAtt();
 
                     g.Damage(Dmg);
 
                     Console.WriteLine("YOUR PV : " + g.PV());
+
+                    System.Threading.Thread.Sleep(1000);
+
+                    Console.Clear();
                 }
             }
 
@@ -158,8 +173,6 @@ namespace ProjetRPG.Story
             }
             else
                 Console.WriteLine("Congratulations You win against your enemies");
-
-            MoveChoice();
         }
 
         public void Story3()
