@@ -99,12 +99,12 @@ namespace ProjetRPG
                     {
                         case Player.Player.PocketMonster.Glouglou:
                             PocketMonster.Glouglou.PrintGlouGlouAttack(P1.Level);
-   
                             Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
 
                             break;
                         case Player.Player.PocketMonster.Saicho:
                             PocketMonster.Saicho.PrintSaichoAttack(P1.Level);
+                            Menu.AskChoice(1, Player.Player.AskAttack(P1.Level));
                             break;
                     }
                     break;
