@@ -63,16 +63,19 @@ namespace ProjetRPG.Story
         {
             int PV = 30;
 
-            Monster.Monster.PrintMonsterStory2();
-            Monster.Monster.PrintMonsterPV(PV);
+            while(PV != 0)
+            {
+                Monster.Monster.PrintMonsterStory2();
+                Monster.Monster.PrintMonsterPV(PV);
 
 
-            g.Choicebattle();
+                g.Choicebattle();
 
-            int AskAtt = Menu.AskChoice(1, Player.Player.AskAttack(level));
+                int AskAtt = Menu.AskChoice(1, Player.Player.AskAttack(level));
 
-            int Att = PocketMonster.Glouglou.AttackGlouglou(AskAtt);
+                int Att = PocketMonster.Glouglou.AttackGlouglou(AskAtt);
 
+            }
 
 
 
