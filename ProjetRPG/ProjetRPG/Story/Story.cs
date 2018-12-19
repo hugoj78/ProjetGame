@@ -30,6 +30,7 @@ namespace ProjetRPG.Story
                 Console.Write("You can't skip the next position THIS IS THE FINAL BOSS" +
                     "\n1. FIGHT" +
                     "\n2. Use Object" +
+                    "\n3. Save Game" +
                     "\nYour choice : ");
             }
         }

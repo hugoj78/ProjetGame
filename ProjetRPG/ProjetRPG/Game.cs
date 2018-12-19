@@ -107,6 +107,16 @@ namespace ProjetRPG
             Console.Write("Your Choice : ");
             int choix = Menu.AskChoice(1, 3);
 
+            for (int u = 0; u <= P1.Count_Inventaire; u++)
+            {
+                if (Math.Abs(inventaire[u].Value) <= 0 && choix == 2)
+                {
+                    Console.Write("You don't have any Object" +
+                    	"\nYour new Choice :");
+                    choix = Menu.AskChoice(1, 3);
+                }
+            }
+
             switch (choix)
             {
                 case 1:
@@ -274,6 +284,16 @@ namespace ProjetRPG
 
             int choice = Menu.AskChoice(1, 4);
 
+            for (int u = 0; u <= P1.Count_Inventaire; u++)
+            {
+                if (Math.Abs(inventaire[u].Value) <= 0 && choice == 3)
+                {
+                    Console.Write("You don't have any Object" +
+                        "\nYour new Choice :");
+                    choice = Menu.AskChoice(1, 4);
+                }
+            }
+
             switch (choice)
             {
                 case 1:
@@ -330,7 +350,17 @@ namespace ProjetRPG
         public void StoryChoice20()
         {
 
-            int choice = Menu.AskChoice(1, 2);
+            int choice = Menu.AskChoice(1, 3);
+
+            for (int u = 0; u <= P1.Count_Inventaire; u++)
+            {
+                if (Math.Abs(inventaire[u].Value) <= 0 && choice == 2)
+                {
+                    Console.Write("You don't have any Object" +
+                        "\nYour new Choice :");
+                    choice = Menu.AskChoice(1, 3);
+                }
+            }
 
             switch (choice)
             {
@@ -374,6 +404,9 @@ namespace ProjetRPG
                     System.Threading.Thread.Sleep(2000);
 
                     Console.Clear();
+                    break;
+                case 3:
+                    Menu.SaveGame(P1);
                     break;
                 default:
                     break;
