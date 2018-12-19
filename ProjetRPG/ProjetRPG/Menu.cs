@@ -87,15 +87,10 @@ namespace ProjetRPG
 
         public void PrintAskObject()
         {
-<<<<<<< HEAD
-            Console.WriteLine("Choose a Item to start ! Choose the good one ! It could help you during your Epic adventure" +
-                "\nYou can choose between Pickle, Pepper, FriendZone or Viagra" +
-                "\nEach of this Item have a special effect that you will discover");
-=======
+
             Console.WriteLine("You will get an object to start ! Choose the good one ! It could help you" +
                 "\nYou can choose between Pickle or Viagra" +
                 "\nEach of this object got special effect that you will discover");
->>>>>>> hugo
 
             Console.Write("1. Pickle (Full Health)" +
                 "\n2. Viagra (Level-Up Directly)" +
