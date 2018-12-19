@@ -126,11 +126,12 @@ namespace ProjetRPG
                         Console.Write((i + 1 ) + ". ");
                         inventaire[i].Print();
                     }
+                    int x = P1.Count_Inventaire + 1; 
+                    Console.WriteLine(x + ". Return");
 
-                    // TODO ASKCHOICE QUELLE POTION UTILISER
-                    // TODO FONCTION USE QUI EXISTE DEJA
-                    // TODO FUnction POUR VIRER UNE VALUE;
-                    // SI VALUE == 0 alors delete objet
+                    int choiceobject = Menu.AskChoice(1, x);
+
+
                     Console.ReadLine();
                     Console.ReadLine();
                     Console.Clear();
@@ -141,9 +142,8 @@ namespace ProjetRPG
 
                     if (Run())
                     {
-                        // TODO QUITTE LE COMBAT
-                        // TODO MAIS NE l'EVITE PAS PLUS TARD
-                        return 0;
+                        Console.WriteLine("You Run Away ...");
+                        return 1000;
                     }
                     else
                     {
