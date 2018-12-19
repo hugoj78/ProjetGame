@@ -350,6 +350,7 @@ namespace ProjetRPG
                             System.Threading.Thread.Sleep(2000);
                             Console.Clear();
                         }
+                        P1.Position++;
                     }
 
                     System.Threading.Thread.Sleep(2000);

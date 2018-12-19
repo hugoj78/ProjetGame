@@ -335,7 +335,10 @@ namespace ProjetRPG.Story
                 Console.WriteLine("Congratulations You win against your first enemy");
             }
             else
+            {
                 Console.WriteLine("Congratulations You win against your enemy");
+            }
+            Console.Clear();
         }
     }
 }
