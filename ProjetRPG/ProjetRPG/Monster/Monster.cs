@@ -1,14 +1,17 @@
 ﻿using System;
 namespace ProjetRPG.Monster
 {
+    // Class Monster
     class Monster
     {
-
+        // Fonction PrintMonsterPV : Affiche les PV de l'ennemie rentrer en parametre
         public static void PrintMonsterPV(int PV)
         {
             Console.WriteLine("ENNEMY PV : " + PV);
         }
 
+
+        // Fonction PrintPhraseAtt : Affiche que le monstre attack avec un effet
         public static void PrintPhraseAtt()
         {
             string Print = @"
@@ -47,11 +50,13 @@ namespace ProjetRPG.Monster
             Console.ForegroundColor = ConsoleColor.White;
         }
 
+        // Fcontion PrintMonsterStory : Affiche le monstre selon les degats rentre en parametre
         public static void PrintMonsterStory(int Dmg)
         {
-            if (Dmg == 5)
+            switch (Dmg)
             {
-                Console.WriteLine(@"
+                case 5:
+                    Console.WriteLine(@"
 KENNY :
 
           _.-*'""""'*-._
@@ -78,10 +83,9 @@ KENNY :
       | ""'*--.._I_..--*'"" |
       | __..._  | _..._   |
      .'""      `""'""     ''""'.");
-            }
-            else if (Dmg == 7)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 7:
+                    Console.WriteLine(@"
 KYLE :
     .*""""""""""""""""""""""""""""""""""""""""""""*.
    :                          ;
@@ -109,10 +113,9 @@ KYLE :
        | __..._  | _..._   |
       .'""      `""'""     ''""'.
       """"""""""""""""""""""""""""""""""""""""""""""");
-            }
-            else if (Dmg == 9)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 9:
+                    Console.WriteLine(@"
 STAN :
 
              .-""""-.
@@ -141,10 +144,9 @@ STAN :
       | __..._  | _..._   |
      .'""      `""'""     ''""'.
      """"""""""""""""""""""""""""""""""""""""""""""");
-            }
-            else if (Dmg == 6)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 6:
+                    Console.WriteLine(@"
 BUTTERS :
          -.._       _-*""`
            \ '-._.*' <""
@@ -173,10 +175,9 @@ BUTTERS :
       | __..._  | _..._   |
      .'""      `""'""     ''""'.
      """"""""""""""""""""""""""""""""""""""""""""""");
-            }
-            else if (Dmg == 10)
-            {
-                Console.WriteLine(@"                       
+                    break;
+                case 10:
+                    Console.WriteLine(@"                       
 CARTMAN :
                        _.-**-._
                     _,(        ),_
@@ -204,10 +205,9 @@ CARTMAN :
        \  __..-------.._        ___..---._  /
        :'""              '-..--''          ""';
         '""""""""""""""""""""""""""""""""' '""""""""""""""""""""""""""""""' ");
-            }
-            else if (Dmg == 2)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 2:
+                    Console.WriteLine(@"
 SID :
                              ,--.""""
                       __,----( o ))
@@ -243,10 +243,9 @@ SID :
            ,','._::::| \ \ \  \
           (,(,---;;;;;  \ \|;;;)
                       `._\_\");
-            }
-            else if (Dmg == 11)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 11:
+                    Console.WriteLine(@"
 FRANKLIN :
                              ___-------___
                          _-~~             ~~-_
@@ -263,10 +262,9 @@ FRANKLIN :
        ~-----||====/~     |==================|       |/~~~~~
         (_(__/  ./     /                    \_\      \.
                (_(___/                         \_____)_)");
-            }
-            else if (Dmg == 12)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 12:
+                    Console.WriteLine(@"
 TUX :
          _nnnn_
         dGGGGMMb
@@ -284,10 +282,9 @@ TUX :
 _)      \.___.,|     .'
 \____   )MMMMMP|   .'
      `-'       `--' hjm");
-            }
-            else if (Dmg == 13)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 13:
+                    Console.WriteLine(@"
 SPONGEBOB :
 
       .--..--..--..--..--..--.
@@ -311,10 +308,9 @@ SPONGEBOB :
              ||       ||
              ||_.-.   ||_.-.
             (_.--__) (_.--__)");
-            }
-            else if (Dmg == 14)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 14:
+                    Console.WriteLine(@"
 THE REAPER :
                                          .""""--..__
                      _                     []       ``-.._
@@ -351,10 +347,9 @@ THE REAPER :
   /`                          \         //   
 /`                            |        ||    
 `-.___,-.      .-.        ___,'        (/  ");
-            }
-            else if (Dmg == 15)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 15:
+                    Console.WriteLine(@"
 BEN THE DRAGON'S CAT :
 
              __.-/|
@@ -370,10 +365,9 @@ BEN THE DRAGON'S CAT :
  ||      /    \)___)\
  | \____(      )___) )____
   \______(_______;;;)__;;;)");
-            }
-            else if (Dmg == 25)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 25:
+                    Console.WriteLine(@"
 LACOSTE :
            .-._   _ _ _ _ _ _ _ _
 .-''-.__.-'00  '-' ' ' ' ' ' ' ' '-.
@@ -384,10 +378,9 @@ LACOSTE :
                              (((-'\ .' /
                            _____..'  .'
                           '-._____.-'");
-            }
-            else if (Dmg == 30)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 30:
+                    Console.WriteLine(@"
 GARFIELD :
           __ __
         ,;::\::\
@@ -412,10 +405,9 @@ GARFIELD :
 /;' ""' ;  '..--. ))
 \:.___(___   ) ))'
        SSt`-'-''");
-            }
-            else if (Dmg == 22)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 22:
+                    Console.WriteLine(@"
 SSSSSNNNNAAAAAAKKKKKKKEEEEE :
 
            /^\/^\
@@ -435,10 +427,9 @@ SSSSSNNNNAAAAAAKKKKKKKEEEEE :
           \      ~-____-~    _-~    ~-_    ~-_-~    /
             ~-_           _-~          ~-_       _-~
                ~--______-~                ~-___-~");
-            }
-            else if (Dmg == 50)
-            {
-                Console.WriteLine(@"
+                    break;
+                case 50:
+                    Console.WriteLine(@"
 THE MAGICIAN :
                               '             .           .
                            o       '   o  .     '   . O
@@ -469,8 +460,8 @@ THE MAGICIAN :
                                      |       \
                                      |        `.__,
                                      \_________.-'-");
+                    break;
             }
-
         }
     }
 }

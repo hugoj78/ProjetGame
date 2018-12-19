@@ -1,5 +1,6 @@
 ﻿namespace ProjetRPG.Player
 {
+    // Class Player
     public class Player
     {
         public enum PocketMonster { Saicho, Glouglou};
@@ -14,6 +15,7 @@
         public int Count_Inventaire;
         public int Position;
 
+        // Constructeur Player : selon les choix de l'utilisteur créer un Player avec diffents parametre
         public Player(string na, PocketMonster p, Objet i)
         {
             Name = na;
@@ -37,6 +39,10 @@
             }
         }
 
+        // Fonction Ask Attack : retourne le niveau du joueur
+        // Fonction qui sert a retourner le nombre de choix possible
+        // d'attaque selon les niveau
+        // Car au niveau 3 et 5 le pocket monster debloque des attaques
        public static int AskAttack(int level)
         {
             if (level >= 3 && level < 5)

@@ -3,7 +3,7 @@ namespace ProjetRPG.PocketMonster
 {
     class Glouglou 
     {
-
+        // Fonction AttackGlouglou : Return la puissance de l'attaque selon le choix du joueur
         public static int AttackGlouglou(int choice)
         {
             switch (choice)
@@ -21,6 +21,7 @@ namespace ProjetRPG.PocketMonster
             }
         }
 
+        // Fonction PrintGlouglouAttack : Affiche les attack selon le niveau du pocket monster
         public static void PrintGlouGlouAttack(int level)
         {
 
@@ -38,7 +39,7 @@ namespace ProjetRPG.PocketMonster
         }
 
 
-
+        // Fonction PrintGLouglou : Affiche le pocket monster Glouglou
         public static void PrintGlouglou()
         {
             Console.WriteLine(@"     __                                _.--'""7

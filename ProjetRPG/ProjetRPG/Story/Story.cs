@@ -5,11 +5,14 @@ namespace ProjetRPG.Story
     {
         public Game g;
 
+        // Constructeur Story
         public Story(Game game)
         {
             g = game;
         }
 
+
+        // Fonction MoveChoice : Affiche les choix possible ainsi que la position du joueur entre les positions
         public void MoveChoice(int position)
         {
             Nav.Map.PrintMap();
@@ -23,6 +26,8 @@ namespace ProjetRPG.Story
                 "\n4. Save Game" +
                 "\nYour choice : ");
 
+            // Cas particulier de la position 20
+            // Il ne peut pas passer la prochaine position
             if (position == 20)
             {
                 Console.WriteLine("\nYour Postion : " + position);
@@ -35,6 +40,7 @@ namespace ProjetRPG.Story
             }
         }
 
+        // Fonction StartMap :Affiche la Map avec les consignes
         public void StartMap()
         {
             Console.Clear();
@@ -59,6 +65,9 @@ namespace ProjetRPG.Story
 
         }
 
+        // Fonction StartStory :Selon la position appelle la fonction StoryMonster avec comme parametre ses PV
+        // et ses DMG ou la fonction StoryObject avec comme parametre le type d'objet
+        // Selon la case on fait Level Up le pocketMonster
         public void StartStory(int position)
         {
             switch (position)
@@ -195,6 +204,8 @@ namespace ProjetRPG.Story
             }
         }
 
+
+        // Fonction Story1 : Premiere story : cas particulier pas passable et donne un objet 
         public void Story1()
         {
             Console.Clear();
@@ -212,6 +223,7 @@ namespace ProjetRPG.Story
 
         }
 
+        // Fonction StoryObject : selon le parametre donne un certain objet au joueur
         public void StoryObject(string type)
         {
             Console.Clear();
@@ -235,6 +247,7 @@ namespace ProjetRPG.Story
             Console.ReadLine();
         }
 
+        // Fonction StoryBoss : Effet special sur le string PrintBoss pour le boss final
         public void StoryBoss()
         {
             string PrintBoss = @"
@@ -269,29 +282,42 @@ namespace ProjetRPG.Story
             Console.Clear();
         }
 
+
+        // Fonction StoryMonster : Combat un monstre selon les parametre de point de vie et de degats
         public void StoryMonster(int Pv, int Dmg)
         {
             int PV = Pv;
 
             while(PV > 0)
             {
+                // Affiche le mosntre selon ses degats
                 Monster.Monster.PrintMonsterStory(Dmg);
+                // Affiche ses PV
                 Monster.Monster.PrintMonsterPV(PV);
 
-
+                // Affiche les pv du joueur
                 Console.WriteLine("YOUR PV : " + g.PV());
+
+                // On lui demande d'attaquer / utiliser un objet / fuir
                 int attaque = g.Choicebattle();
 
+                // selon le choix les PV du monstre varie
                 PV -= attaque;
 
+                // Si le Monstre n'est pas mort
                 if (PV > 0)
                 {
                     Console.Clear();
 
+                    // On Affiche que le mosntre attaque avec un effet 
                     Monster.Monster.PrintPhraseAtt();
 
+                    // On applique les degats au joueur
+                    // Fonction DAMAGE verifie si le joueur est mort ou non
+                    // Dans le cas ou le joueur meurt affiche GAME OVER et quitte le jeu
                     g.Damage(Dmg);
 
+                    // On lui affiche les PV restant
                     Console.WriteLine("YOUR PV : " + g.PV());
 
                     System.Threading.Thread.Sleep(1000);
@@ -300,6 +326,9 @@ namespace ProjetRPG.Story
                 }
             }
 
+            // Cas particulier si le joueur tue le monstre KENNY
+            // On lui affiche la phrase culte de la serie SOUTHPARK
+            // Sinon on le felicite d'avoir vaincue son ennemie
             if (Dmg == 5)
             {
                 Console.WriteLine("OMG YOU KILLED KENNY ! YOU BASTARD");

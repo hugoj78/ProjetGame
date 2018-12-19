@@ -1,8 +1,11 @@
 ﻿using System;
 namespace ProjetRPG.Nav
 {
+    // Class Map
     public class Map
     {
+
+        // Fonction PrintMap : Affiche la map
        public static void PrintMap()
         {
             Console.WriteLine(@"

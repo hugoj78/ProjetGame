@@ -1,23 +1,27 @@
 ﻿using System;
 namespace ProjetRPG.Object
 {
+    // Class Item ( Heritage : enfant de Inventaire )
     public class Item : Inventaire
     {
         public enum ItemType { Heal, Level, HealUp };
 
         public ItemType Type;
 
+        // Construteur de Item
         public Item(string name, string descript, float v, ItemType t) : base(name, descript, v)
         {
             Type = t;
         }
 
+        // Fonction PickUp : Indique au joueur qu'il a un nouvelle item
         public override void PickUp()
         {
             base.PickUp();
             Console.WriteLine("You got a new Item");
         }
 
+        // Fonction Use : selon l'object a un effet sur le joueur
         public override void Use(Player.Player p)
         {
             base.Use(p);

@@ -4,6 +4,7 @@ namespace ProjetRPG.PocketMonster
     class Saicho 
     {
 
+        // Fonction PrintSaichoAttack : Affiche les attack selon le niveau du pocket monster
         public static void PrintSaichoAttack(int level)
         {
             if (level < 3)
@@ -25,7 +26,8 @@ namespace ProjetRPG.PocketMonster
             }
         }
 
-        public static int AttackGlouglou(int choice)
+        // Fonction Attack : Return la puissance de l'attaque selon le choix du joueur
+        public static int AttackSaicho(int choice)
         {
             switch (choice)
             {
@@ -42,7 +44,7 @@ namespace ProjetRPG.PocketMonster
             }
         }
 
-
+        // Fonction PrintSaicho : Affiche le pocket monster Saicho
         public static void PrintSaicho()
         {
             Console.WriteLine(@"              _.--""""`-..
