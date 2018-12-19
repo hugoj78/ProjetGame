@@ -45,16 +45,6 @@ namespace ProjetRPG.Monster
             System.Threading.Thread.Sleep(500);
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.White;
-
-            Console.WriteLine(Print);
-            System.Threading.Thread.Sleep(500);
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.Red;
-
-            Console.WriteLine(Print);
-            System.Threading.Thread.Sleep(500);
-            Console.Clear();
-            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public static void PrintMonsterStory(int Dmg)
