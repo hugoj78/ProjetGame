@@ -25,48 +25,48 @@ namespace ProjetRPG
             if (pet == 1 && weapon == 1)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
-                inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
+                inventaire[0] = new Object.ItemStart("Pickle", "Legendary Item : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
             }
            else if (pet == 1 && weapon == 2)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pepper);
-                inventaire[0] = new Object.ItemStart("Pepper", "Item Legendaire :Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
+                inventaire[0] = new Object.ItemStart("Pepper", "Legendary Item :Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
 
             }
             else if (pet == 1 && weapon == 3)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Friendzone);
-                inventaire[0] = new Object.ItemStart("Friendzone", "Item Legendaire : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
+                inventaire[0] = new Object.ItemStart("Friendzone", "Legendary Item : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
 
             }
             else if (pet == 1 && weapon == 4)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Viagra);
-                inventaire[0] = new Object.ItemStart("Viagra", "Item Legendaire : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
+                inventaire[0] = new Object.ItemStart("Viagra", "Legendary Item : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
 
             }
             else if (pet == 2 && weapon == 1)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pickle);
-                inventaire[0] = new Object.ItemStart("Pickle", "Item Legendaire : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
+                inventaire[0] = new Object.ItemStart("Pickle", "Legendary Item : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
 
             }
             else if (pet == 2 && weapon == 2)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pepper);
-                inventaire[0] = new Object.ItemStart("Pepper", "Item Legendaire : Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
+                inventaire[0] = new Object.ItemStart("Pepper", "Legendary Item : Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
 
             }
             else if (pet == 2 && weapon == 3)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Friendzone);
-                inventaire[0] = new Object.ItemStart("Friendzone", "Item Legendaire : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
+                inventaire[0] = new Object.ItemStart("Friendzone", "Legendary Item : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
 
             }
             else if (pet == 2 && weapon == 4)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Viagra);
-                inventaire[0] = new Object.ItemStart("Viagra", "Item Legendaire : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
+                inventaire[0] = new Object.ItemStart("Viagra", "Legendary Item : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
 
             }
 
@@ -85,7 +85,7 @@ namespace ProjetRPG
 
         public void PrintMenuBattle()
         {
-            Console.WriteLine("[1] ATTACK\t[2] OBJECT" + "\n[3] RUN");
+            Console.WriteLine("[1] ATTACK\t[2] ITEM" + "\n[3] RUN");
         }
 
 
@@ -147,7 +147,7 @@ namespace ProjetRPG
                     }
                     else
                     {
-                        Console.Write("You try to run away ! But your ennemie block you !" +
+                        Console.Write("You try to run away ! But your ennemie block you ! What a pity !" +
                         	"\nPress Enter To Continue...");
                         Console.ReadLine();
                         Console.Clear();
@@ -176,7 +176,7 @@ namespace ProjetRPG
         {
             P1.Count_Inventaire += 1;
 
-            inventaire[P1.Count_Inventaire] = new Object.Item("Heal", "Item Commun : Heal Your Friend 10pv ", 1, Object.Item.ItemType.Heal);
+            inventaire[P1.Count_Inventaire] = new Object.Item("Heal", "Common Item : Heal Your PocketMonster 10pv ", 1, Object.Item.ItemType.Heal);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }
@@ -185,7 +185,7 @@ namespace ProjetRPG
         {
             P1.Count_Inventaire += 1;
 
-            inventaire[P1.Count_Inventaire] = new Object.Item("HealUp", "Item Commun : Restore ALL PV Of Your PocketMonster ", 1, Object.Item.ItemType.HealUp);
+            inventaire[P1.Count_Inventaire] = new Object.Item("HealUp", "Common Item : Restore ALL PV Of Your PocketMonster ", 1, Object.Item.ItemType.HealUp);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }
@@ -194,7 +194,7 @@ namespace ProjetRPG
         {
             P1.Count_Inventaire += 1;
 
-            inventaire[P1.Count_Inventaire] = new Object.Item("Damage", "Item Rare : Make 20 dmg to your oppenent ", 1, Object.Item.ItemType.Dmg);
+            inventaire[P1.Count_Inventaire] = new Object.Item("Damage", "Rare Item : Make 20 dmg to your oppenent ", 1, Object.Item.ItemType.Dmg);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }
@@ -203,7 +203,7 @@ namespace ProjetRPG
         {
             P1.Count_Inventaire += 1;
 
-            inventaire[P1.Count_Inventaire] = new Object.Item("Level Up", "Item Rare : Level Up your PocketMonster ", 1, Object.Item.ItemType.Level);
+            inventaire[P1.Count_Inventaire] = new Object.Item("Level Up", "Rare Item : Level-Up your PocketMonster ", 1, Object.Item.ItemType.Level);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }
@@ -212,7 +212,7 @@ namespace ProjetRPG
         {
             P1.Count_Inventaire += 1;
 
-            inventaire[P1.Count_Inventaire] = new Object.Item("Block", "Item Epic : Block your ennemies Attack ", 1, Object.Item.ItemType.Dmg);
+            inventaire[P1.Count_Inventaire] = new Object.Item("Block", "Epic Item : Block your ennemies Attack ", 1, Object.Item.ItemType.Dmg);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }

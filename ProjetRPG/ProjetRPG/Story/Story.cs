@@ -16,10 +16,10 @@ namespace ProjetRPG.Story
             Nav.Map.PrintMap();
             Console.WriteLine("\nYour Postion : " + position) ;
 
-            Console.Write("You can skip the next position and skip a monster :) or an object :/" +
-                "\nBecareful ! You need to Level Up your PocketMonster and skip a position won't give you experience" +
-                "\n\n1. Skip Position" +
-                "\n2. Continue" +
+            Console.Write("You can skip the next position. But you can miss a important object if you do that" +
+                "\nBe careful ! If you want to Level-Up your PocketMonster quickly, don't skip position and take the maximum XP" +
+                "\n\n1. Skip the next Stop" +
+                "\n2. Go to the next Stop" +
                 "\n3. Use Object" +
                 "\nYour choice : ");
 
@@ -49,9 +49,9 @@ namespace ProjetRPG.Story
 ");
             Nav.Map.PrintMap();
 
-            Console.WriteLine("\nWelcome to wolrd of Pocketmonster " +
-                "\nTo move you need to enter the number of the position you want to go !" +
-                "\nBecareful You can't fight against the FINAL BOSS now or dodge some Positon");
+            Console.WriteLine("\nWelcome in the PocketMonster world " +
+                "\nYou can move to the next position or choose to jump the first one !" +
+                "\nBe careful You can't fight against the FINAL BOSS now or dodge some Positon");
 
             Console.WriteLine("Press enter to go to position 1.");
             Console.ReadLine();
@@ -229,39 +229,37 @@ namespace ProjetRPG.Story
 
         public void StoryBoss()
         {
-            Console.WriteLine(@"
+            string PrintBoss = @"
   ______   _                   _     ____                      
  |  ____| (_)                 | |   |  _ \                     
  | |__     _   _ __     __ _  | |   | |_) |   ___    ___   ___ 
  |  __|   | | | '_ \   / _` | | |   |  _ <   / _ \  / __| / __|
  | |      | | | | | | | (_| | | |   | |_) | | (_) | \__ \ \__ \
  |_|      |_| |_| |_|  \__,_| |_|   |____/   \___/  |___/ |___/
-");
+
+            ";
+
+            Console.WriteLine(PrintBoss);
             System.Threading.Thread.Sleep(500);
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(@"
-  ______   _                   _     ____                      
- |  ____| (_)                 | |   |  _ \                     
- | |__     _   _ __     __ _  | |   | |_) |   ___    ___   ___ 
- |  __|   | | | '_ \   / _` | | |   |  _ <   / _ \  / __| / __|
- | |      | | | | | | | (_| | | |   | |_) | | (_) | \__ \ \__ \
- |_|      |_| |_| |_|  \__,_| |_|   |____/   \___/  |___/ |___/
-");
+
+            Console.WriteLine(PrintBoss);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine(PrintBoss);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+
             System.Threading.Thread.Sleep(500);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Clear(); Console.WriteLine(@"
-  ______   _                   _     ____                      
- |  ____| (_)                 | |   |  _ \                     
- | |__     _   _ __     __ _  | |   | |_) |   ___    ___   ___ 
- |  __|   | | | '_ \   / _` | | |   |  _ <   / _ \  / __| / __|
- | |      | | | | | | | (_| | | |   | |_) | | (_) | \__ \ \__ \
- |_|      |_| |_| |_|  \__,_| |_|   |____/   \___/  |___/ |___/
-");
+            Console.Clear(); 
             System.Threading.Thread.Sleep(500);
             Console.Clear();
         }
-
 
         public void StoryMonster(int Pv, int Dmg)
         {
@@ -297,10 +295,10 @@ namespace ProjetRPG.Story
             if (Dmg == 5)
             {
                 Console.WriteLine("OMG YOU KILLED KENNY ! YOU BASTARD");
-                Console.WriteLine("Congratulations You win against your first enemies");
+                Console.WriteLine("Congratulations You win against your first enemy");
             }
             else
-                Console.WriteLine("Congratulations You win against your enemies");
+                Console.WriteLine("Congratulations You win against your enemy");
         }
     }
 }
