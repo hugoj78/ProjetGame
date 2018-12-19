@@ -18,6 +18,45 @@ namespace ProjetRPG
 
         }
 
+        public void LoadGame(string name, string pet, string weapon, int position, int level, int Pv)
+        {
+            if (pet == "Saicho" && weapon == "Pickle")
+            {
+                P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
+                inventaire[0] = new Object.ItemStart("Pickle", "Legendary Item : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
+                P1.Position = position;
+                P1.Level = level;
+                P1.PV = Pv;
+            }
+            else if (pet == "Saicho" && weapon == "Viagra")
+            {
+                P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Viagra);
+                inventaire[0] = new Object.ItemStart("Viagra", "Legendary Item : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
+                P1.Position = position;
+                P1.Level = level;
+                P1.PV = Pv;
+            }
+            else if (pet == "Glouglou" && weapon == "Pickle")
+            {
+                P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pickle);
+                inventaire[0] = new Object.ItemStart("Pickle", "Legendary Item : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
+                P1.Position = position;
+                P1.Level = level;
+                P1.PV = Pv;
+            }
+            else if (pet == "Glouglou" && weapon == "Viagra")
+            {
+                P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Viagra);
+                inventaire[0] = new Object.ItemStart("Viagra", "Legendary Item : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
+                P1.Position = position;
+                P1.Level = level;
+                P1.PV = Pv;
+
+            }
+
+            Histoire();
+        }
+
 
         public void ChoiceGame(string name, int pet, int weapon)
         {
@@ -27,19 +66,7 @@ namespace ProjetRPG
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pickle);
                 inventaire[0] = new Object.ItemStart("Pickle", "Legendary Item : Full Health ", 1, Object.ItemStart.ItemType.Pickle);
             }
-           else if (pet == 1 && weapon == 2)
-            {
-                P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Pepper);
-                inventaire[0] = new Object.ItemStart("Pepper", "Legendary Item :Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
-
-            }
-            else if (pet == 1 && weapon == 3)
-            {
-                P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Friendzone);
-                inventaire[0] = new Object.ItemStart("Friendzone", "Legendary Item : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
-
-            }
-            else if (pet == 1 && weapon == 4)
+            else if (pet == 1 && weapon == 2)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Saicho, Player.Player.Objet.Viagra);
                 inventaire[0] = new Object.ItemStart("Viagra", "Legendary Item : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
@@ -52,18 +79,6 @@ namespace ProjetRPG
 
             }
             else if (pet == 2 && weapon == 2)
-            {
-                P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Pepper);
-                inventaire[0] = new Object.ItemStart("Pepper", "Legendary Item : Kill All Enemies ", 1, Object.ItemStart.ItemType.Pepper);
-
-            }
-            else if (pet == 2 && weapon == 3)
-            {
-                P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Friendzone);
-                inventaire[0] = new Object.ItemStart("Friendzone", "Legendary Item : Nobody Can Touch You ", 1, Object.ItemStart.ItemType.Friendzone);
-
-            }
-            else if (pet == 2 && weapon == 4)
             {
                 P1 = new Player.Player(name, Player.Player.PocketMonster.Glouglou, Player.Player.Objet.Viagra);
                 inventaire[0] = new Object.ItemStart("Viagra", "Legendary Item : Level-Up Directly ", 1, Object.ItemStart.ItemType.Viagra);
@@ -240,7 +255,7 @@ namespace ProjetRPG
         public void StoryChoice()
         {
 
-            int choice = Menu.AskChoice(1, 3);
+            int choice = Menu.AskChoice(1, 4);
 
             switch (choice)
             {
@@ -271,6 +286,9 @@ namespace ProjetRPG
                     System.Threading.Thread.Sleep(2000);
 
                     Console.Clear();
+                    break;
+                case 4:
+                    Menu.SaveGame(P1);
                     break;
                 default:
                     break;

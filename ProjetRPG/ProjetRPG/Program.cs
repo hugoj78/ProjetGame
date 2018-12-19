@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProjetRPG
+﻿namespace ProjetRPG
 {
     class Program
     {

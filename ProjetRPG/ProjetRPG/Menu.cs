@@ -1,7 +1,9 @@
 ﻿using System;
+using System.IO;
+
 namespace ProjetRPG
 {
-    class Menu
+    public class Menu
     {
         public Menu()
         {
@@ -133,7 +135,37 @@ namespace ProjetRPG
 
         public void LoadGame()
         {
+            string Path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"/save.txt";
 
+            using (StreamReader sr = new StreamReader(Path))
+            {
+                string l;
+                string[] info = new string[5];
+
+                l = sr.ReadLine();
+
+                l.Split(";");
+
+                Console.Write(l);
+
+                //Game g = new Game();
+                //g.LoadGame(n, p, w, pos, l, pv);
+            }
+        }
+
+        public static void SaveGame(Player.Player p) 
+        {
+
+        string mydocpath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+                using (StreamWriter s = new StreamWriter(mydocpath + @"/save.txt"))
+                {
+                s.WriteLine(p.Name + ";" + p.Pet + ";" + p.Item + ";" + p.Position + ";" + p.Level + ";" + p.PV);
+                }
+
+            Console.Write("Press Enter to Quit ...");
+            Console.ReadLine();
+            Environment.Exit(0);
         }
 
         public void About()

@@ -3,7 +3,7 @@ namespace ProjetRPG.Object
 {
     public class ItemStart : Inventaire
     {
-        public enum ItemType {Pickle, Viagra, Pepper, Friendzone};
+        public enum ItemType {Pickle, Viagra};
 
         public ItemType Type;
 

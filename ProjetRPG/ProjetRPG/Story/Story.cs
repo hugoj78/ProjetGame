@@ -20,6 +20,7 @@ namespace ProjetRPG.Story
                 "\n\n1. Skip the next Stop" +
                 "\n2. Go to the next Stop" +
                 "\n3. Use Object" +
+                "\n4. Save Game" +
                 "\nYour choice : ");
 
             if (position == 20)
