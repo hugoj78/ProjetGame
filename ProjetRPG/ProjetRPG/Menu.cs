@@ -140,10 +140,11 @@ namespace ProjetRPG
         {
             Console.Clear();
 
-            Console.WriteLine("Welcome in a world where PocketMonster are your friend !\nThey could dominated the world " +
-                "but they are too cute for that! So they fight with us for the power, the bitch and the drugs. " +
-                "\nAnyway, you have to travel and fight a terrible ennemy : THE MULTIPLA !!! " +
-                "\nIt's a Terrific surname for your bestfriend, he wants to dominate the world without you");
+            Console.WriteLine("Welcome to a world where PocketMonster are your friend ! " +
+            	"\nThey could dominated the world but they are too cute for that! " +
+            	"\nSo they fight with us for the power. " +
+            	"\nAnyway, you have to travel and reach the end to fight a terrible enemy : The Magician !!! " +
+            	"\nIt's a Terrific surname for your bestfriend, he wants to dominate the world without you");
 
             Console.WriteLine(@"                 .""-,.__
                  `.     `.  ,
