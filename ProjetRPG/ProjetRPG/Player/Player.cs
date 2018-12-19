@@ -2,7 +2,7 @@
 
 namespace ProjetRPG.Player
 {
-    class Player
+    public class Player
     {
         public enum PocketMonster { Saicho, Glouglou};
         public enum Objet { Pickle, Pepper, Friendzone, Viagra}
@@ -15,8 +15,6 @@ namespace ProjetRPG.Player
         public int Level;
         public int Count_Inventaire;
         public int Position;
-       
-        private int n;
 
         public Player(string na, PocketMonster p, Objet i)
         {
@@ -39,28 +37,6 @@ namespace ProjetRPG.Player
                 PV = 150;
                 Level = 1;
             }
-        }
-
-        public Player(int n)
-        {
-            this.n = n;
-        }
-
-        public int FullHeal(int heal)
-        {
-            PV = 150;
-            {
-                Console.WriteLine(@"
-                  ______ _    _ _      _        _______      __         
-                 |  ____| |  | | |    | |      |  __ \ \    / /    _    
-                 | |__  | |  | | |    | |      | |__) \ \  / /   _| |_  
-                 |  __| | |  | | |    | |      |  ___/ \ \/ /   |_   _| 
-                 | |    | |__| | |____| |____  | |      \  /      |_|   
-                 |_|     \____/|______|______| |_|       \/             
-
-                ");
-            }
-            return PV;
         }
 
        public static int AskAttack(int level)

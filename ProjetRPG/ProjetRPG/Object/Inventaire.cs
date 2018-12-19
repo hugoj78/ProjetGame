@@ -28,9 +28,9 @@ namespace ProjetRPG.Object
             Console.WriteLine("You got: " + Name + " ( " + Description + ")");
         }
 
-        public virtual void Use()
+        public virtual void Use(Player.Player p)
         {
-            Console.WriteLine("You used :" + Name);
+            Console.WriteLine("You used : " + Name);
         }
     }
 }

@@ -3,7 +3,6 @@ namespace ProjetRPG.Story
 {   
     class Story
     {
-
         public Game g;
 
         public Story(Game game)
@@ -60,7 +59,6 @@ namespace ProjetRPG.Story
 
         public void StartStory(int position)
         {
-            //TODO AJOUTER LES LEVEL UP DES POCKETMONSTER
             switch (position)
             {
                 case 2:
@@ -74,10 +72,14 @@ namespace ProjetRPG.Story
                 case 4:
                     Console.Clear();
                     StoryMonster(50,9);
+                    g.LevelUp();
+                    Console.WriteLine("\n\nYOU LEVEL UP : " + g.Level());
+                    Console.Write("Press Enter To Continue ...");
+                    Console.ReadLine();
                     break;
                 case 5:
                     Console.Clear();
-                    StoryObject("dmg");
+                    StoryObject("heal");
                     break;
                 case 6:
                     Console.Clear();
@@ -113,6 +115,8 @@ namespace ProjetRPG.Story
        \  __..-------.._        ___..---._  /
        :'""              '-..--''          ""';
         '""""""""""""""""""""""""""""""""' '""""""""""""""""""""""""""""""'");
+                    g.LevelUp();
+                    Console.WriteLine("\n\n YOU LEVEL UP : " + g.Level() );
                     Console.Write("Press Enter To Continue ...");
                     Console.ReadLine();
                     StoryObject("HealUp");
@@ -127,7 +131,7 @@ namespace ProjetRPG.Story
                     break;
                 case 10:
                     Console.Clear();
-                    StoryObject("block");
+                    StoryObject("heal");
                     break;
                 case 11:
                     Console.Clear();
@@ -136,6 +140,10 @@ namespace ProjetRPG.Story
                 case 12:
                     Console.Clear();
                     StoryMonster(80,13);
+                    g.LevelUp();
+                    Console.WriteLine("\n\n YOU LEVEL UP : " + g.Level());
+                    Console.Write("Press Enter To Continue ...");
+                    Console.ReadLine();
                     break;
                 case 13:
                     Console.Clear();
@@ -160,6 +168,10 @@ namespace ProjetRPG.Story
                 case 18:
                     Console.Clear();
                     StoryMonster(200, 30);
+                    g.LevelUp();
+                    Console.WriteLine("\n\n YOU LEVEL UP : " + g.Level());
+                    Console.Write("Press Enter To Continue ...");
+                    Console.ReadLine();
                     break;
                 case 19:
                     Console.Clear();
@@ -209,14 +221,8 @@ namespace ProjetRPG.Story
                 case "heal":
                     g.AddItemHeal();
                     break;
-                case "dmg":
-                    g.AddItemDmg();
-                    break;
                 case "level":
                     g.AddItemLevel();
-                    break;
-                case "block":
-                    g.AddItemBlock();
                     break;
                 case "HealUp":
                     g.AddItemHealUp();

@@ -1,28 +1,27 @@
 ﻿using System;
 namespace ProjetRPG.PocketMonster
 {
-    class Saicho : Player.Player
+    class Saicho 
     {
-        public Saicho(int n) : base(n)
-        {
-
-        }
 
         public static void PrintSaichoAttack(int level)
         {
             if (level < 3)
             {
-                Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)");
+                Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)" +
+                    "\nYour Choice : ");
             }
             else if (level >= 3 && level < 5)
             {
                 Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)" +
-                                "\n[3] Flame Thrower(40)");
+                                "\n[3] Flame Thrower(40)" +
+                                "\nYour Choice : ");
             }
             else if (level >= 5)
             {
                 Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)" +
-                                "\n[3] Flame Thrower(40)     [4] Zenith(70)");
+                                "\n[3] Flame Thrower(40)     [4] Zenith(80)" +
+                                "\nYour Choice : ");
             }
         }
 
@@ -37,7 +36,7 @@ namespace ProjetRPG.PocketMonster
                 case 3:
                     return 40;
                 case 4:
-                    return 70;
+                    return 80;
                 default:
                     return 0;
             }
