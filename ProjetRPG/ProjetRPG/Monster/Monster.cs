@@ -6,12 +6,55 @@ namespace ProjetRPG.Monster
 
         public static void PrintMonsterPV(int PV)
         {
-            Console.WriteLine("PV : " + PV);
+            Console.WriteLine("ENNEMY PV : " + PV);
         }
 
         public static void PrintPhraseAtt()
         {
-            Console.WriteLine("LE MONSTRE AAAATTTTTAAAAAAAQQQQQQQUUUUUUUEEEEEE");
+            string Print = @"
+
+ _    _                                           _                
+| |_ | |__    ___   _ __ ___    ___   _ __   ___ | |_   ___  _ __  
+| __|| '_ \  / _ \ | '_ ` _ \  / _ \ | '_ \ / __|| __| / _ \| '__| 
+| |_ | | | ||  __/ | | | | | || (_) || | | |\__ \| |_ |  __/| |    
+ \__||_| |_| \___| |_| |_| |_| \___/ |_| |_||___/ \__| \___||_|    
+                                                                   
+        _    _                 _                                   
+  __ _ | |_ | |_   __ _   ___ | | __ ___   _   _   ___   _   _     
+ / _` || __|| __| / _` | / __|| |/ // __| | | | | / _ \ | | | |    
+| (_| || |_ | |_ | (_| || (__ |   < \__ \ | |_| || (_) || |_| |    
+ \__,_| \__| \__| \__,_| \___||_|\_\|___/  \__, | \___/  \__,_|    
+                                           |___/                   
+";
+            Console.WriteLine(Print);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.WriteLine(Print);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine(Print);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.WriteLine(Print);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine(Print);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Console.WriteLine(Print);
+            System.Threading.Thread.Sleep(500);
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         public static void PrintMonsterStory(int Dmg)
@@ -234,7 +277,7 @@ FRANKLIN :
             else if (Dmg == 12)
             {
                 Console.WriteLine(@"
-LINUX :
+TUX :
          _nnnn_
         dGGGGMMb
        @p~qp~~qMb
@@ -282,7 +325,7 @@ SPONGEBOB :
             else if (Dmg == 14)
             {
                 Console.WriteLine(@"
-THE DEATH :
+THE REAPER :
                                          .""""--..__
                      _                     []       ``-.._
                   .'` `'.                  ||__           `-._
@@ -406,7 +449,7 @@ SSSSSNNNNAAAAAAKKKKKKKEEEEE :
             else if (Dmg == 50)
             {
                 Console.WriteLine(@"
-THE TERRIFFIC MAGICIAN :
+THE MAGICIAN :
                               '             .           .
                            o       '   o  .     '   . O
                         '   .   ' .   _____  '    .      .
