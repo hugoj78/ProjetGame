@@ -1,13 +1,8 @@
 ﻿using System;
 namespace ProjetRPG.PocketMonster
 {
-    class Glouglou : Player.Player
+    class Glouglou 
     {
-
-        public Glouglou(int n):base(n)
-        {
-
-        }
 
         public static int AttackGlouglou(int choice)
         {
@@ -16,11 +11,11 @@ namespace ProjetRPG.PocketMonster
                 case 1:
                     return 10;
                 case 2:
-                    return 15;
+                    return 20;
                 case 3:
-                    return 25;
+                    return 30;
                 case 4:
-                    return 50;
+                    return 60;
                 default:
                     return 0;
             }
@@ -30,15 +25,15 @@ namespace ProjetRPG.PocketMonster
         {
 
             if (level < 3)
-                Console.Write("[1] Aquatail(10)           [2] O'Pistol(15)" +
+                Console.Write("[1] Aquatail(10)           [2] O'Pistol(20)" +
                 	"\nYour Choice : ");
             else if (level >= 3 && level < 5)
-                Console.Write("[1] Aquatail(10)           [2] O'Pistol(15)" +
-                                "\n[3] O'Spray(20)" +
+                Console.Write("[1] Aquatail(10)           [2] O'Pistol(20)" +
+                                "\n[3] O'Spray(30)" +
                                 "\nYour Choice : ");
             else if (level >= 5)
-                Console.Write("[1] Aquatail(10)           [2] O'Pistol(15)" +
-                                "\n[3] O'Spray(25)            [4] Siphon(50)" +
+                Console.Write("[1] Aquatail(10)           [2] O'Pistol(20)" +
+                                "\n[3] O'Spray(30)            [4] Siphon(60)" +
                                 "\nYour Choice : ");
         }
 

@@ -8,7 +8,7 @@ namespace ProjetRPG
 
         public Story.Story story;
 
-        Player.Player P1;
+        public Player.Player P1;
 
         public Game()
         {
@@ -74,15 +74,6 @@ namespace ProjetRPG
 
         }
 
-        public void Deplacement()
-        {
-            //printChoix();
-            int choix = Menu.AskChoice(0, 4);
-            //TODO recueper case plateau
-            //TODO tester contenu case
-            //TODO peut etre lancer combat
-        }
-
         public void PrintMenuBattle()
         {
             Console.WriteLine("[1] ATTACK\t[2] OBJECT" + "\n[3] RUN");
@@ -123,17 +114,27 @@ namespace ProjetRPG
                 case 2:
                     for (int i = 0; i <= P1.Count_Inventaire; i++)
                     {
-                        Console.Write((i + 1 ) + ". ");
+                        Console.Write((i + 1) + ". ");
                         inventaire[i].Print();
                     }
-                    int x = P1.Count_Inventaire + 1; 
-                    Console.WriteLine(x + ". Return");
-
+                    Console.WriteLine("Your choice : ");
+                    int x = (P1.Count_Inventaire + 1);
                     int choiceobject = Menu.AskChoice(1, x);
 
+                    int y = (choiceobject - 1);
 
-                    Console.ReadLine();
-                    Console.ReadLine();
+                    if (Math.Abs(inventaire[y].Value) > 0)
+                    {
+                        inventaire[y].Use(P1);
+                        inventaire[y].Value--;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You can't use something You don't have");
+                    }
+
+                    System.Threading.Thread.Sleep(2000);
+
                     Console.Clear();
 
                     return 0;
@@ -151,7 +152,6 @@ namespace ProjetRPG
                         	"\nPress Enter To Continue...");
                         Console.ReadLine();
                         Console.Clear();
-                        Choicebattle();
                     }
                     return 0;
 
@@ -164,7 +164,7 @@ namespace ProjetRPG
         {
             Random r = new Random();
 
-            if (r.Next(0,100) < 10)
+            if (r.Next(0,100) < 30)
             {
                 return true;
             }
@@ -190,29 +190,11 @@ namespace ProjetRPG
             inventaire[P1.Count_Inventaire].PickUp();
         }
 
-        public void AddItemDmg()
-        {
-            P1.Count_Inventaire += 1;
-
-            inventaire[P1.Count_Inventaire] = new Object.Item("Damage", "Item Rare : Make 20 dmg to your oppenent ", 1, Object.Item.ItemType.Dmg);
-
-            inventaire[P1.Count_Inventaire].PickUp();
-        }
-
         public void AddItemLevel()
         {
             P1.Count_Inventaire += 1;
 
             inventaire[P1.Count_Inventaire] = new Object.Item("Level Up", "Item Rare : Level Up your PocketMonster ", 1, Object.Item.ItemType.Level);
-
-            inventaire[P1.Count_Inventaire].PickUp();
-        }
-
-        public void AddItemBlock()
-        {
-            P1.Count_Inventaire += 1;
-
-            inventaire[P1.Count_Inventaire] = new Object.Item("Block", "Item Epic : Block your ennemies Attack ", 1, Object.Item.ItemType.Dmg);
 
             inventaire[P1.Count_Inventaire].PickUp();
         }
@@ -245,6 +227,16 @@ namespace ProjetRPG
             return P1.PV;
         }
 
+        public int Level()
+        {
+            return P1.Level;
+        }
+
+        public int LevelUp()
+        {
+            return P1.Level++;
+        }
+
         public void StoryChoice()
         {
 
@@ -259,17 +251,26 @@ namespace ProjetRPG
                     P1.Position += 1;
                     break;
                 case 3:
-
                     for (int i = 0; i <= P1.Count_Inventaire; i++)
                     {
                         Console.Write((i + 1) + ". ");
                         inventaire[i].Print();
                     }
+                    Console.WriteLine("Your choice : ");
+                    int x = (P1.Count_Inventaire + 1);
+                    int choiceobject = Menu.AskChoice(1, x);
 
-                    // TODO ASKCHOICE QUELLE POTION UTILISER
-                    // TODO FONCTION USE QUI EXISTE DEJA
-                    // TODO FUnction POUR VIRER UNE VALUE;
-                    // SI VALUE == 0 alors delete objet
+                    int y = (choiceobject - 1);
+
+                    if (Math.Abs(inventaire[y].Value) > 0)
+                    {
+                        inventaire[y].Use(P1);
+                        inventaire[y].Value--;
+                    }
+
+                    System.Threading.Thread.Sleep(2000);
+
+                    Console.Clear();
                     break;
                 default:
                     break;
@@ -292,16 +293,27 @@ namespace ProjetRPG
                         Console.Write((i + 1) + ". ");
                         inventaire[i].Print();
                     }
+                    Console.WriteLine("Your choice : ");
+                    int x = (P1.Count_Inventaire + 1);
+                    int choiceobject = Menu.AskChoice(1, x);
 
-                    // TODO ASKCHOICE QUELLE POTION UTILISER
-                    // TODO FONCTION USE QUI EXISTE DEJA
-                    // TODO FUnction POUR VIRER UNE VALUE;
-                    // SI VALUE == 0 alors delete objet
+                    int y = (choiceobject - 1);
+
+                    if (Math.Abs(inventaire[y].Value) > 0)
+                    {
+                        inventaire[y].Use(P1);
+                        inventaire[y].Value--;
+                    }
+
+                    System.Threading.Thread.Sleep(2000);
+
+                    Console.Clear();
                     break;
                 default:
                     break;
             }
         }
+
 
         public void Histoire()
         {

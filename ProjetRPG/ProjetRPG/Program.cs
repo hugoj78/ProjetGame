@@ -7,8 +7,6 @@ namespace ProjetRPG
         static void Main(string[] args)
         {
             Menu m1 = new Menu();
-
-            //TODO PENSER DIFFICULTE CREATION MAP
         }
     }
 }
