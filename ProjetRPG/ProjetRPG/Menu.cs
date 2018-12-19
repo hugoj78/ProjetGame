@@ -3,7 +3,6 @@ namespace ProjetRPG
 {
     class Menu
     {
-
         public Menu()
         {
             PrintMenu();
@@ -89,13 +88,11 @@ namespace ProjetRPG
         public void PrintAskObject()
         {
             Console.WriteLine("You will get an object to start ! Choose the good one ! It could help you" +
-                "\nYou can choose between Pickle, Pepper, FriendZone or Viagra" +
+                "\nYou can choose between Pickle or Viagra" +
                 "\nEach of this object got special effect that you will discover");
 
             Console.Write("1. Pickle (Full Health)" +
-                "\n2. Pepper (Kill All Enemies)" +
-                "\n3. FriendZone (Nobody Can Touch You)" +
-                "\n4. Viagra (Level-Up Directly)" +
+                "\n2. Viagra (Level-Up Directly)" +
                 "\nYour choice : ");
         }
 
@@ -126,7 +123,7 @@ namespace ProjetRPG
             int pet = AskChoice(1, 2);
 
             PrintAskObject();
-            int weapon = AskChoice(1, 4);
+            int weapon = AskChoice(1, 2);
 
             Game g = new Game();
             g.ChoiceGame(name, pet, weapon);

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ProjetRPG.Player
+﻿namespace ProjetRPG.Player
 {
     public class Player
     {

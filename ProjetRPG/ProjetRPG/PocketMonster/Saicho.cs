@@ -8,18 +8,18 @@ namespace ProjetRPG.PocketMonster
         {
             if (level < 3)
             {
-                Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)" +
-                    "\nYour Choice : ");
+                Console.Write("[1] Holy fire(20)         [2] Blast(30)" +
+                              "\nYour Choice : ");
             }
             else if (level >= 3 && level < 5)
             {
-                Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)" +
+                Console.Write("[1] Holy fire(20)         [2] Blast(30)" +
                                 "\n[3] Flame Thrower(40)" +
                                 "\nYour Choice : ");
             }
             else if (level >= 5)
             {
-                Console.WriteLine("[1] Holy fire(20)         [2] Blast(30)" +
+                Console.Write("[1] Holy fire(20)         [2] Blast(30)" +
                                 "\n[3] Flame Thrower(40)     [4] Zenith(80)" +
                                 "\nYour Choice : ");
             }
