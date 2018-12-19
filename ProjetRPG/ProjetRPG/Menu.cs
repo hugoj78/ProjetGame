@@ -140,16 +140,21 @@ namespace ProjetRPG
             using (StreamReader sr = new StreamReader(Path))
             {
                 string l;
-                string[] info = new string[5];
 
                 l = sr.ReadLine();
 
-                l.Split(";");
+                string[] parts = l.Split(';');
 
-                Console.Write(l);
+                string n = parts[0];
+                string p = parts[1];
+                string w = parts[2];
+                int pos = int.Parse(parts[3]);
+                int lv = int.Parse(parts[4]);
+                int pv = int.Parse(parts[5]);
 
-                //Game g = new Game();
-                //g.LoadGame(n, p, w, pos, l, pv);
+
+                Game g = new Game();
+                g.LoadGame(n, p, w, pos, lv, pv);
             }
         }
 

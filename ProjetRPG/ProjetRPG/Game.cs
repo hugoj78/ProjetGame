@@ -85,6 +85,12 @@ namespace ProjetRPG
 
             }
 
+            Console.Clear();
+
+            story.StartMap();
+
+            story.Story1();
+
             Histoire();
 
         }
@@ -127,25 +133,36 @@ namespace ProjetRPG
                     return 0;
 
                 case 2:
-                    for (int i = 0; i <= P1.Count_Inventaire; i++)
-                    {
-                        Console.Write((i + 1) + ". ");
-                        inventaire[i].Print();
-                    }
-                    Console.WriteLine("Your choice : ");
-                    int x = (P1.Count_Inventaire + 1);
-                    int choiceobject = Menu.AskChoice(1, x);
+                    bool test = false;
 
-                    int y = (choiceobject - 1);
+                    while (test != true)
+                    {
+                        for (int i = 0; i <= P1.Count_Inventaire; i++)
+                        {
+                            Console.Write((i + 1) + ". ");
+                            inventaire[i].Print();
+                        }
 
-                    if (Math.Abs(inventaire[y].Value) > 0)
-                    {
-                        inventaire[y].Use(P1);
-                        inventaire[y].Value--;
-                    }
-                    else
-                    {
-                        Console.WriteLine("You can't use something You don't have");
+                        Console.WriteLine("Your choice : ");
+
+
+                        int x = (P1.Count_Inventaire + 1);
+                        int choiceobject = Menu.AskChoice(1, x);
+
+                        int y = (choiceobject - 1);
+
+                        if (Math.Abs(inventaire[y].Value) > 0)
+                        {
+                            inventaire[y].Use(P1);
+                            inventaire[y].Value--;
+                            test = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("You can't use something You don't have");
+                            System.Threading.Thread.Sleep(2000);
+                            Console.Clear();
+                        }
                     }
 
                     System.Threading.Thread.Sleep(2000);
@@ -155,7 +172,7 @@ namespace ProjetRPG
                     return 0;
 
                 case 3:
-
+                    
                     if (Run())
                     {
                         Console.WriteLine("You Run Away ...");
@@ -266,21 +283,36 @@ namespace ProjetRPG
                     P1.Position += 1;
                     break;
                 case 3:
-                    for (int i = 0; i <= P1.Count_Inventaire; i++)
-                    {
-                        Console.Write((i + 1) + ". ");
-                        inventaire[i].Print();
-                    }
-                    Console.WriteLine("Your choice : ");
-                    int x = (P1.Count_Inventaire + 1);
-                    int choiceobject = Menu.AskChoice(1, x);
+                    bool test = false;
 
-                    int y = (choiceobject - 1);
-
-                    if (Math.Abs(inventaire[y].Value) > 0)
+                    while (test != true)
                     {
-                        inventaire[y].Use(P1);
-                        inventaire[y].Value--;
+                        for (int i = 0; i <= P1.Count_Inventaire; i++)
+                        {
+                            Console.Write((i + 1) + ". ");
+                            inventaire[i].Print();
+                        }
+
+                        Console.WriteLine("Your choice : ");
+
+
+                        int x = (P1.Count_Inventaire + 1);
+                        int choiceobject = Menu.AskChoice(1, x);
+
+                        int y = (choiceobject - 1);
+
+                        if (Math.Abs(inventaire[y].Value) > 0)
+                        {
+                            inventaire[y].Use(P1);
+                            inventaire[y].Value--;
+                            test = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("You can't use something You don't have");
+                            System.Threading.Thread.Sleep(2000);
+                            Console.Clear();
+                        }
                     }
 
                     System.Threading.Thread.Sleep(2000);
@@ -306,21 +338,37 @@ namespace ProjetRPG
                     P1.Position += 1;
                     break;
                 case 2:
-                    for (int i = 0; i <= P1.Count_Inventaire; i++)
-                    {
-                        Console.Write((i + 1) + ". ");
-                        inventaire[i].Print();
-                    }
-                    Console.WriteLine("Your choice : ");
-                    int x = (P1.Count_Inventaire + 1);
-                    int choiceobject = Menu.AskChoice(1, x);
 
-                    int y = (choiceobject - 1);
+                    bool test = false;
 
-                    if (Math.Abs(inventaire[y].Value) > 0)
+                    while (test != true)
                     {
-                        inventaire[y].Use(P1);
-                        inventaire[y].Value--;
+                        for (int i = 0; i <= P1.Count_Inventaire; i++)
+                        {
+                            Console.Write((i + 1) + ". ");
+                            inventaire[i].Print();
+                        }
+
+                        Console.WriteLine("Your choice : ");
+
+
+                        int x = (P1.Count_Inventaire + 1);
+                        int choiceobject = Menu.AskChoice(1, x);
+
+                        int y = (choiceobject - 1);
+
+                        if (Math.Abs(inventaire[y].Value) > 0)
+                        {
+                            inventaire[y].Use(P1);
+                            inventaire[y].Value--;
+                            test = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine("You can't use something You don't have");
+                            System.Threading.Thread.Sleep(2000);
+                            Console.Clear();
+                        }
                     }
 
                     System.Threading.Thread.Sleep(2000);
@@ -335,10 +383,6 @@ namespace ProjetRPG
 
         public void Histoire()
         {
-
-            story.StartMap();
-
-            story.Story1();
 
             while (P1.Position != 21)
             {
