@@ -121,19 +121,9 @@ namespace ProjetRPG
             Console.Write("Your Choice : ");
             int choix = Menu.AskChoice(1, 3);
 
-            for (int u = 0; u <= P1.Count_Inventaire; u++)
-            {
-                if (Math.Abs(inventaire[u].Value) <= 0 && choix == 2)
-                {
-                    Console.Write("You don't have any Object" +
-                    	"\nYour new Choice :");
-                    choix = Menu.AskChoice(1, 3);
-                }
-            }
-
             switch (choix)
             {
-                // Case 1 : Attaque : Selon le pokemon et l'attaque choisie return un nombre different
+                // Case 1 : Attaque : Selon le pocket monster et l'attaque choisie return un nombre different
                 case 1:
                     switch (P1.Pet)
                     {
@@ -314,18 +304,6 @@ namespace ProjetRPG
 
             int choice = Menu.AskChoice(1, 4);
 
-            // Verifie si le joueur a des objets
-            for (int u = 0; u <= P1.Count_Inventaire; u++)
-            {
-                if (Math.Abs(inventaire[u].Value) <= 0 && choice == 3)
-                {
-                    Console.Write("You don't have any Object" +
-                        "\nYour new Choice :");
-                    choice = Menu.AskChoice(1, 4);
-                }
-            }
-
-
             switch (choice)
             {
                 // Passe une position
@@ -395,16 +373,6 @@ namespace ProjetRPG
         {
 
             int choice = Menu.AskChoice(1, 3);
-
-            for (int u = 0; u <= P1.Count_Inventaire; u++)
-            {
-                if (Math.Abs(inventaire[u].Value) <= 0 && choice == 2)
-                {
-                    Console.Write("You don't have any Object" +
-                        "\nYour new Choice :");
-                    choice = Menu.AskChoice(1, 3);
-                }
-            }
 
             switch (choice)
             {
