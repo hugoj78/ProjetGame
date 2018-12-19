@@ -48,7 +48,7 @@ namespace ProjetRPG
                                                    
                                                    
 ");
-            Console.Write("\n 1. New Game \t 3. About" +
+            Console.Write("\n 1. New Game \t 3. Once upon a Time..." +
                 "\n 2. Load \t 4. Exit" +
                 "\n Your choice : ");
         }
@@ -88,9 +88,9 @@ namespace ProjetRPG
 
         public void PrintAskObject()
         {
-            Console.WriteLine("You will get an object to start ! Choose the good one ! It could help you" +
+            Console.WriteLine("Choose a Item to start ! Choose the good one ! It could help you during your Epic adventure" +
                 "\nYou can choose between Pickle, Pepper, FriendZone or Viagra" +
-                "\nEach of this object got special effect that you will discover");
+                "\nEach of this Item have a special effect that you will discover");
 
             Console.Write("1. Pickle (Full Health)" +
                 "\n2. Pepper (Kill All Enemies)" +
@@ -142,9 +142,9 @@ namespace ProjetRPG
         {
             Console.Clear();
 
-            Console.WriteLine("Welcome to a world where PocketMonster are your friend !\nThey could dominated the world " +
+            Console.WriteLine("Welcome in a world where PocketMonster are your friend !\nThey could dominated the world " +
                 "but they are too cute for that! So they fight with us for the power, the bitch and the drugs. " +
-                "\nAnyway, you have to travel and fight a terrible ennemy : THE MULTIPLAT !!! " +
+                "\nAnyway, you have to travel and fight a terrible ennemy : THE MULTIPLA !!! " +
                 "\nIt's a Terrific surname for your bestfriend, he wants to dominate the world without you");
 
             Console.WriteLine(@"                 .""-,.__
@@ -195,7 +195,7 @@ namespace ProjetRPG
 
         public void Quit()
         {
-            Console.Write("Thank You ! See you Later" +
+            Console.Write("Thank's ! See you Later" +
                 "\nPress any key to close the game");
             Console.ReadLine();
         }
