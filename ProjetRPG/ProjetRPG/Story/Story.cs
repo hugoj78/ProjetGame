@@ -196,7 +196,15 @@ namespace ProjetRPG.Story
                     Console.Clear();
                     StoryBoss();
                     StoryMonster(666, 50);
-                    Console.Write("END");
+                    Console.Write(@"
+  ______ _   _ _____    
+ |  ____| \ | |  __ \   
+ | |__  |  \| | |  | |  
+ |  __| | . ` | |  | |  
+ | |____| |\  | |__| |  
+ |______|_| \_|_____/   
+
+                    ");
                     Console.ReadLine();
                     break;
                 default:
